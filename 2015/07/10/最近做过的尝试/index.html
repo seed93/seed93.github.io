@@ -4,23 +4,26 @@
 <head>
   <meta charset="UTF-8">
   
-    <title>textile试用 | LD99&#39;s Blog</title>
+    <title>最近做过的尝试 | LD99&#39;s Blog</title>
     <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
     
     <meta name="author" content="Liang Ding">
     
 
     
-    <meta name="description" content="试用了markdown，感觉功能还是比较简单，发现有一个 par 扩展很不错，但是没有加入到hexo的扩展里，在hexo扩展中找到了 pandoc 的扩展，看上去非常强大，支持各种格式互相转化，不过扩展本身只能转一种，可以自己多创建几个函数。textile 是一个功能更多的格式，接下来会抽空学习，本篇博文就是用 textile 编写的，但是textile使用的人比较少，相应的语法介绍只有官方介绍，">
+    <meta name="description" content="Release codereconstruction项目迁移到VS2015后，重新整理了两个版本的代码，在SVN和github上双重备份，并在github上发布了两个平台下的Demo
+Texture MappingCLSTM Demo &amp;amp; gcc 5.1 installation">
 <meta property="og:type" content="article">
-<meta property="og:title" content="textile试用">
-<meta property="og:url" content="http://ld99.top/2015/07/05/textile/index.html">
+<meta property="og:title" content="最近做过的尝试">
+<meta property="og:url" content="http://ld99.top/2015/07/10/最近做过的尝试/index.html">
 <meta property="og:site_name" content="LD99's Blog">
-<meta property="og:description" content="试用了markdown，感觉功能还是比较简单，发现有一个 par 扩展很不错，但是没有加入到hexo的扩展里，在hexo扩展中找到了 pandoc 的扩展，看上去非常强大，支持各种格式互相转化，不过扩展本身只能转一种，可以自己多创建几个函数。textile 是一个功能更多的格式，接下来会抽空学习，本篇博文就是用 textile 编写的，但是textile使用的人比较少，相应的语法介绍只有官方介绍，">
-<meta property="og:updated_time" content="2015-07-06T07:41:14.635Z">
+<meta property="og:description" content="Release codereconstruction项目迁移到VS2015后，重新整理了两个版本的代码，在SVN和github上双重备份，并在github上发布了两个平台下的Demo
+Texture MappingCLSTM Demo &amp;amp; gcc 5.1 installation">
+<meta property="og:updated_time" content="2015-07-10T06:49:59.018Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="textile试用">
-<meta name="twitter:description" content="试用了markdown，感觉功能还是比较简单，发现有一个 par 扩展很不错，但是没有加入到hexo的扩展里，在hexo扩展中找到了 pandoc 的扩展，看上去非常强大，支持各种格式互相转化，不过扩展本身只能转一种，可以自己多创建几个函数。textile 是一个功能更多的格式，接下来会抽空学习，本篇博文就是用 textile 编写的，但是textile使用的人比较少，相应的语法介绍只有官方介绍，">
+<meta name="twitter:title" content="最近做过的尝试">
+<meta name="twitter:description" content="Release codereconstruction项目迁移到VS2015后，重新整理了两个版本的代码，在SVN和github上双重备份，并在github上发布了两个平台下的Demo
+Texture MappingCLSTM Demo &amp;amp; gcc 5.1 installation">
 
     
     <link rel="alternative" href="/atom.xml" title="LD99&#39;s Blog" type="application/atom+xml">
@@ -79,14 +82,14 @@
 		<header class="article-info clearfix">
   <h1 itemprop="name">
     
-      <a href="/2015/07/05/textile/" title="textile试用" itemprop="url">textile试用</a>
+      <a href="/2015/07/10/最近做过的尝试/" title="最近做过的尝试" itemprop="url">最近做过的尝试</a>
   </h1>
   <p class="article-author">By
        
 		<a href="/about" title="Liang Ding" target="_blank" itemprop="author">Liang Ding</a>
 		
   <p class="article-time">
-    <time datetime="2015-07-05T01:18:16.000Z" itemprop="datePublished"> 发表于 2015-07-05</time>
+    <time datetime="2015-07-10T06:44:30.000Z" itemprop="datePublished"> 发表于 2015-07-10</time>
     
   </p>
 </header>
@@ -95,43 +98,21 @@
 		<div id="toc" class="toc-article">
 			<strong class="toc-title">文章目录</strong>
 		
-			<ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#移植-par-插件"><span class="toc-number">1.</span> <span class="toc-text">移植 par 插件</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#多级列表风格"><span class="toc-number">2.</span> <span class="toc-text">多级列表风格</span></a></li></ol>
+			<ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Release_code"><span class="toc-number">1.</span> <span class="toc-text">Release code</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Texture_Mapping"><span class="toc-number">2.</span> <span class="toc-text">Texture Mapping</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#CLSTM_Demo_&_gcc_5-1_installation"><span class="toc-number">3.</span> <span class="toc-text">CLSTM Demo & gcc 5.1 installation</span></a></li></ol>
 		
 		</div>
 		
-		<p>试用了markdown，感觉功能还是比较简单，发现有一个 <a href="https://github.com/limodou/par" target="_blank" rel="external">par</a> 扩展很不错，但是没有加入到hexo的扩展里，在hexo扩展中找到了 <a href="http://pandoc.org/" target="_blank" rel="external">pandoc</a> 的扩展，看上去非常强大，支持各种格式互相转化，不过扩展本身只能转一种，可以自己多创建几个函数。<a href="http://redcloth.org/textile/" target="_blank" rel="external">textile</a> 是一个功能更多的格式，接下来会抽空学习，本篇博文就是用 <a href="http://redcloth.org/textile/" target="_blank" rel="external">textile</a> 编写的，但是textile使用的人比较少，相应的语法介绍只有官方介绍，官方的页面那个丑啊，速度特别慢。写 <a href="https://github.com/limodou/par" target="_blank" rel="external">par</a> 的插件给hexo暂时搁置，仅记录配置经历。</p>
-<a id="more"></a>
-<h1 id="移植-par-插件">移植 <a href="https://github.com/limodou/par" target="_blank" rel="external">par</a> 插件</h1>
-<p><a href="https://github.com/limodou/par" target="_blank" rel="external">par</a> 本身使用python写的，我对 python 不熟悉，直接运行 example 会出错，说没有找到 <strong>future</strong> 这个包，安装这个依赖很麻烦，先要用 <a href="https://bootstrap.pypa.io/ez_setup.py" target="_blank" rel="external">ez_setup.py</a> 安装 <strong>setuptools</strong></p>
-<pre><code>python ez_setup.py
-</code></pre>
-<p>然后用命令 <code>easy_install future</code> 安装 <strong>future</strong> 包，最后用 <code>sudo python setup.py</code> 安装 <a href="https://github.com/limodou/par" target="_blank" rel="external">par</a> 。</p>
-<p>安装好以后进行测试，按文档中所说用命令 <code>python markdown2html.py readme.md &gt; readme.html</code> 就可以完成转换，但实际中 example 的 <strong>markdown2html.py</strong> 已经改成了 <strong>md2html.py</strong> ，此外该文件会输出很多无关东西，需要注释掉 <code>print(result[0].render())</code> 这句话，并把 <code>print(str(x, 'utf8').encode('gbk'))</code> 改成 <code>print(x.encode('utf8'))</code> 。</p>
-<p>安装插件可以参考<a href="https://hexo.io/zh-cn/docs/plugins.html" target="_blank" rel="external">官方主页</a>，除了修改官方提到的两个文件，还需要修改根目录下的 <strong>package.json</strong> ，在此注册新增加的插件。 <strong>index.js</strong> 可以参考 <a href="https://www.npmjs.com/package/hexo-renderer-pandoc" target="_blank" rel="external">pandoc</a> 插件，注意python运行的环境是你执行 <code>hexo g</code> 的地方。可以把文件后缀记为 <code>.par</code> ，和 <code>.md</code> 有所区分。为了让 <a href="https://github.com/limodou/par" target="_blank" rel="external">par</a> 不是从文件读，而是从标准输入流读入，将 <code>t = text</code> 改成 <code>t = sys.stdin.read()</code> 。</p>
-<p>所有工作做完就可以生成页面了，但是我生成的页面会有几个问题</p>
-<p>1. 对强调符号无法解析<br>2. 标题后带有难看的anchor<br>3. 对 <code>&lt;!-- more --&gt;</code> 无法解析</p>
-<p>以上问题还是很麻烦，暂时不想处理了，还是老老实实用原生渲染器吧。</p>
-<h1 id="多级列表风格">多级列表风格</h1>
-<p>这一节和本篇主题无关，仅用于补充之前做得一点点修改。<a href="https://github.com/wuchong/jacman" target="_blank" rel="external">jacman</a> 主题对多级列表各级的图标是一样的，看上去不太舒服，修改 <code>themes/jacman/source/css/_partial/article.styl</code> 文件，在第115行后添加</p>
-<pre><code>li li
-      list-style square
-</code></pre>
-<p>其中 <code>square</code> 可以做其他替换，如果要对第三级或更高级进行定制可不断叠加 <strong>li</strong> 。</p>
-  
+		<h1 id="Release_code">Release code</h1><p><a href="https://github.com/seed93/reconstruction" target="_blank" rel="external">reconstruction</a>项目迁移到VS2015后，重新整理了两个版本的代码，在SVN和github上双重备份，并在<a href="https://github.com/" target="_blank" rel="external">github</a>上发布了两个平台下的<a href="">Demo</a></p>
+<h1 id="Texture_Mapping">Texture Mapping</h1><h1 id="CLSTM_Demo_&amp;_gcc_5-1_installation">CLSTM Demo &amp; gcc 5.1 installation</h1>  
 	</div>
 		<footer class="article-footer clearfix">
 <div class="article-catetags">
 
 <div class="article-categories">
   <span></span>
-  <a class="article-category-link" href="/categories/hexo/">hexo</a>
+  <a class="article-category-link" href="/categories/工程配置/">工程配置</a>
 </div>
 
-
-  <div class="article-tags">
-  
-  <span></span> <a href="/tags/markdown/">markdown</a><a href="/tags/textile/">textile</a>
-  </div>
 
 </div>
 
@@ -139,7 +120,7 @@
 
 	<div class="article-share" id="share">
 	
-	  <div data-url="http://ld99.top/2015/07/05/textile/" data-title="textile试用 | LD99&#39;s Blog" data-tsina="1951133423" class="share clearfix">
+	  <div data-url="http://ld99.top/2015/07/10/最近做过的尝试/" data-title="最近做过的尝试 | LD99&#39;s Blog" data-tsina="1951133423" class="share clearfix">
 	  </div>
 	
 	</div>
@@ -153,18 +134,18 @@
 <nav class="article-nav clearfix">
  
  <div class="prev" >
- <a href="/2015/07/07/项目从VS2010迁移到VS2015/" title="项目从VS2010迁移到VS2015">
+ <a href="/2015/07/14/CNN-theory-tutorial/" title="CNN theory tutorial">
   <strong>上一篇：</strong><br/>
   <span>
-  项目从VS2010迁移到VS2015</span>
+  CNN theory tutorial</span>
 </a>
 </div>
 
 
 <div class="next">
-<a href="/2015/07/04/hello-world/"  title="博客开通，欢迎交流">
+<a href="/2015/07/07/项目从VS2010迁移到VS2015/"  title="项目从VS2010迁移到VS2015">
  <strong>下一篇：</strong><br/> 
- <span>博客开通，欢迎交流
+ <span>项目从VS2010迁移到VS2015
 </span>
 </a>
 </div>
@@ -173,7 +154,7 @@
 
 	
 <section id="comments" class="comment">
-	<div class="ds-thread" data-thread-key="2015/07/05/textile/" data-title="textile试用" data-url="http://ld99.top/2015/07/05/textile/"></div>
+	<div class="ds-thread" data-thread-key="2015/07/10/最近做过的尝试/" data-title="最近做过的尝试" data-url="http://ld99.top/2015/07/10/最近做过的尝试/"></div>
 </section>
 
 
@@ -183,7 +164,7 @@
   <div id="toc" class="toc-aside">
   <strong class="toc-title">文章目录</strong>
  
- <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#移植-par-插件"><span class="toc-number">1.</span> <span class="toc-text">移植 par 插件</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#多级列表风格"><span class="toc-number">2.</span> <span class="toc-text">多级列表风格</span></a></li></ol>
+ <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Release_code"><span class="toc-number">1.</span> <span class="toc-text">Release code</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Texture_Mapping"><span class="toc-number">2.</span> <span class="toc-text">Texture Mapping</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#CLSTM_Demo_&_gcc_5-1_installation"><span class="toc-number">3.</span> <span class="toc-text">CLSTM Demo & gcc 5.1 installation</span></a></li></ol>
  
   </div>
 
