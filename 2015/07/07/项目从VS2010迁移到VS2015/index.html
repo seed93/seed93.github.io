@@ -18,11 +18,7 @@
 <meta property="og:site_name" content="LD99's Blog">
 <meta property="og:description" content="由于各种原因，实验室机器一直在用Visual Studio 2010，最近闲来无事，升级至Visual Studio 2015 Community，需要重新配置项目，在此记录配置的经历以及遇到的问题。">
 <meta property="og:image" content="http://i1.tietuku.com/47a70acbe5627532.jpg">
-<<<<<<< HEAD
 <meta property="og:updated_time" content="2015-07-07T05:49:26.956Z">
-=======
-<meta property="og:updated_time" content="2015-07-09T02:11:17.864Z">
->>>>>>> d649a30ddb7334f9f871940a87b401ebc48d961a
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="项目从VS2010迁移到VS2015">
 <meta name="twitter:description" content="由于各种原因，实验室机器一直在用Visual Studio 2010，最近闲来无事，升级至Visual Studio 2015 Community，需要重新配置项目，在此记录配置的经历以及遇到的问题。">
@@ -100,17 +96,12 @@
 		<div id="toc" class="toc-article">
 			<strong class="toc-title">文章目录</strong>
 		
-<<<<<<< HEAD
 			<ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#关于VS2010"><span class="toc-number">1.</span> <span class="toc-text">关于VS2010</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#之前为什么要选择这个版本"><span class="toc-number">1.1.</span> <span class="toc-text">之前为什么要选择这个版本</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#为什么要放弃这个版本"><span class="toc-number">1.2.</span> <span class="toc-text">为什么要放弃这个版本</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#不能完全放弃"><span class="toc-number">1.3.</span> <span class="toc-text">不能完全放弃</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#迁移reconstruction项目"><span class="toc-number">2.</span> <span class="toc-text">迁移reconstruction项目</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#静态编译_OpenCV_3-0-0"><span class="toc-number">2.1.</span> <span class="toc-text">静态编译 OpenCV 3.0.0</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#静态编译_PCL"><span class="toc-number">2.2.</span> <span class="toc-text">静态编译 PCL</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#动态链接库问题"><span class="toc-number">2.3.</span> <span class="toc-text">动态链接库问题</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#安全创建子进程"><span class="toc-number">3.</span> <span class="toc-text">安全创建子进程</span></a></li></ol>
-=======
-			<ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#关于vs2010"><span class="toc-number">1.</span> <span class="toc-text">关于VS2010</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#之前为什么要选择这个版本"><span class="toc-number">1.1.</span> <span class="toc-text">之前为什么要选择这个版本</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#为什么要放弃这个版本"><span class="toc-number">1.2.</span> <span class="toc-text">为什么要放弃这个版本</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#不能完全放弃"><span class="toc-number">1.3.</span> <span class="toc-text">不能完全放弃</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#迁移reconstruction项目"><span class="toc-number">2.</span> <span class="toc-text">迁移reconstruction项目</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#静态编译-opencv-3.0.0"><span class="toc-number">2.1.</span> <span class="toc-text">静态编译 OpenCV 3.0.0</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#静态编译-pcl"><span class="toc-number">2.2.</span> <span class="toc-text">静态编译 PCL</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#动态链接库问题"><span class="toc-number">2.3.</span> <span class="toc-text">动态链接库问题</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#安全创建子进程"><span class="toc-number">3.</span> <span class="toc-text">安全创建子进程</span></a></li></ol>
->>>>>>> d649a30ddb7334f9f871940a87b401ebc48d961a
 		
 		</div>
 		
 		<p>由于各种原因，实验室机器一直在用Visual Studio 2010，最近闲来无事，升级至Visual Studio 2015 Community，需要重新配置项目，在此记录配置的经历以及遇到的问题。</p>
 <a id="more"></a>
-<<<<<<< HEAD
 <h1 id="关于VS2010">关于VS2010</h1><h2 id="之前为什么要选择这个版本">之前为什么要选择这个版本</h2><p>一方面是个人原因，觉得VS2012和VS2013过于庞大，编译生成的文件过于冗杂，也许这只是一种偏见。更重要的原因是迫不得已，很多软件都只有VS2010的库和执行文件，其他版本需要自行编译。<a href="https://github.com/seed93/Calibration" target="_blank" rel="external">calibration</a>项目的依赖关系是<br><figure class="highlight elixir"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">lapack -&gt; sba -&gt; cvsba -&gt; calibration</span><br></pre></td></tr></table></figure></p>
 <p><em>lapack</em> 本身是 <em>fortran</em> 写的，windows 下有两种编译方式，一种是用 Intel 的编译器，需要付费，另一种是用 MinGW。当时一时没有找到 Intel 的编译器，对 MinGW 不熟悉，于是放弃自己编译 <em>lapack</em> ，直接在官方网站上下载编译好的版本。</p>
 <p><a href="http://www.pointclouds.org" target="_blank" rel="external">PCL (Point Cloud Library)</a> 是开源包，编译好的库也只有VS2010版本，整个库非常大，依赖很多，自行编译也会比较麻烦。</p>
@@ -140,43 +131,6 @@
 <h2 id="动态链接库问题">动态链接库问题</h2><p>之前在VS2010下没有问题，现在在VS2015的DEBUG下也没有问题，只有RELEASE会出错，具体表现是在主程序退出时对dll执行退出，产生 <em>unhandled exception</em> 。经过各种尝试发现是在dll中执行了从主线程的 <code>cv::Mat</code> 赋值，类似<br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="rule"><span class="attribute">cv</span>:<span class="value">:Mat mat_in_dll = mat_from_main</span></span>;</span><br></pre></td></tr></table></figure></p>
 <p>可能导致 <code>mat_in_dll</code> 在 dll 和 main 中析构了两次。之前也遇到过同样的问题，是从主程序传入了 vector。以后千万不要在dll中试图引入主程序的高级格式，比如 vector、string、cv::Mat等，自己定义的类可以引入，需要处理好析构。</p>
 <h1 id="安全创建子进程">安全创建子进程</h1><p>由于需要在主程序中调用其他可执行文件产生子进程，而子进程的崩溃会导致主进程无法继续，该问题会导致整个程序卡死。参考<a href="http://blog.csdn.net/roofalison/article/details/3051916" target="_blank" rel="external">“windows下安全的创建子进程”</a>，我改写了如下函数<br><figure class="highlight monkey"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">void safe_process(char * cmdLine, DWORD max_time) &#123;</span><br><span class="line">	TCHAR szCmdLine[MAX_PATH];<span class="preprocessor"></span><br><span class="line">#ifdef UNICODE</span></span><br><span class="line">	MultiByteToWideChar(CP_ACP, <span class="number">0</span>, cmdLine, -<span class="number">1</span>, szCmdLine, MAX_PATH);<span class="preprocessor"></span><br><span class="line">#<span class="keyword">else</span></span></span><br><span class="line">	strcpy(szCmdLine, cmdLine);<span class="preprocessor"></span><br><span class="line">#<span class="keyword">endif</span></span></span><br><span class="line">	STARTUPINFO si;</span><br><span class="line">	PROCESS_INFORMATION <span class="built_in">pi</span>;</span><br><span class="line">	ZeroMemory(&amp;si, sizeof(si));</span><br><span class="line">	si.cb = sizeof(si);</span><br><span class="line">	ZeroMemory(&amp;<span class="built_in">pi</span>, sizeof(<span class="built_in">pi</span>));</span><br><span class="line">	<span class="keyword">if</span> (CreateProcess(<span class="literal">NULL</span>, szCmdLine, <span class="number">0</span>, <span class="number">0</span>, <span class="literal">FALSE</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>, &amp;si, &amp;<span class="built_in">pi</span>)) &#123;</span><br><span class="line">		CloseHandle(<span class="built_in">pi</span>.hThread);</span><br><span class="line">		WaitForSingleObject(<span class="built_in">pi</span>.hProcess, max_time);</span><br><span class="line">		CloseHandle(<span class="built_in">pi</span>.hProcess);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-=======
-<h1 id="关于vs2010">关于VS2010</h1>
-<h2 id="之前为什么要选择这个版本">之前为什么要选择这个版本</h2>
-<p>一方面是个人原因，觉得VS2012和VS2013过于庞大，编译生成的文件过于冗杂，也许这只是一种偏见。更重要的原因是迫不得已，很多软件都只有VS2010的库和执行文件，其他版本需要自行编译。<a href="https://github.com/seed93/Calibration" target="_blank" rel="external">calibration</a>项目的依赖关系是 <figure class="highlight elixir"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">lapack -&gt; sba -&gt; cvsba -&gt; calibration</span><br></pre></td></tr></table></figure></p>
-<p><em>lapack</em> 本身是 <em>fortran</em> 写的，windows 下有两种编译方式，一种是用 Intel 的编译器，需要付费，另一种是用 MinGW。当时一时没有找到 Intel 的编译器，对 MinGW 不熟悉，于是放弃自己编译 <em>lapack</em> ，直接在官方网站上下载编译好的版本。</p>
-<p><a href="http://www.pointclouds.org" target="_blank" rel="external">PCL (Point Cloud Library)</a> 是开源包，编译好的库也只有VS2010版本，整个库非常大，依赖很多，自行编译也会比较麻烦。</p>
-<h2 id="为什么要放弃这个版本">为什么要放弃这个版本</h2>
-<p>主要原因是最近有工夫来做这件事了。之前用起来会有一个问题，自己改了VS的配色，导致启动后加载配色不很成功，非常难看，需要手动重新设置配色，而改配色会导致VS卡死几秒钟，很难过。自己本身就比较喜欢用新东西，最近出了VS2015，于是版本直升了。花一两天时间来完成升级。</p>
-<h2 id="不能完全放弃">不能完全放弃</h2>
-<p>VS2015刚出不久，intel还没有出对应的 <em>fortran</em> 编译器，所以没法生成可用的 <em>lapack</em> ，calibration项目还得保持原样。</p>
-<h1 id="迁移reconstruction项目">迁移<a href="https://github.com/seed93/reconstruction" target="_blank" rel="external">reconstruction</a>项目</h1>
-<p>reconstruction 项目实现了多视角人脸三维重建，依赖于 <a href="http://opencv.org/" target="_blank" rel="external">OpenCV</a> 和 <a href="http://www.pointclouds.org" target="_blank" rel="external">PCL</a> ，主程序完成于2014年夏秋。为了增强可移植性，工程采用静态编译方式。由于 <a href="http://www.pointclouds.org" target="_blank" rel="external">PCL</a> 库非常庞大，链接时间过长，为了避免调试时每次编译都要重新链接 <a href="http://www.pointclouds.org" target="_blank" rel="external">PCL</a> ，故把涉及到 <a href="http://www.pointclouds.org" target="_blank" rel="external">PCL</a> 的函数提取到一个单独的类，封装在额外的动态链接库中。下面主要介绍如何对这些依赖库静态编译以及动态链接库使用注意事项。</p>
-<h2 id="静态编译-opencv-3.0.0">静态编译 <a href="http://opencv.org/" target="_blank" rel="external">OpenCV 3.0.0</a></h2>
-<p><a href="http://opencv.org/" target="_blank" rel="external">OpenCV</a> 终于发布了3.0版本，借此升级IDE之际，顺便尝鲜。暂未研究新版本 <a href="http://opencv.org/" target="_blank" rel="external">OpenCV</a> 的更新变化，仅对静态编译做一定说明。</p>
-<ol style="list-style-type: decimal">
-<li><p>准备工具：下载安装 <a href="http://www.cmake.org/download/" target="_blank" rel="external">CMake</a>，下载 <a href="https://github.com/Itseez/opencv/archive/3.0.0.zip" target="_blank" rel="external">OpenCV 3.0.0</a> 源码。</p></li>
-<li>调用 <a href="http://www.cmake.org/download/" target="_blank" rel="external">CMake</a> 生成工程项目
-<ol style="list-style-type: decimal">
-<li>输入解压后 <a href="https://github.com/Itseez/opencv/archive/3.0.0.zip" target="_blank" rel="external">OpenCV 3.0.0</a> 的路径以及要生成的工程路径</li>
-<li>点击configure，选择 Visual Studio 14 2015 Win64 ，完成。</li>
-<li>把BUILD下的BUILD_SHARED_LIBS的对勾去掉；参考下图把CMAKE下所有MD改成MT，MDd改成MTd，把SHARED所有配置复制到STATIC处 <img src="http://i1.tietuku.com/47a70acbe5627532.jpg" title="CMAKE配置" alt="CMAKE配置"></li>
-<li>重新configure，然后generate。</li>
-</ol></li>
-<li><p>打开生成的工程，在DEBUG和RELEASE下各执行一次ALL_BUILD，完成后在install目录下就有完整的include、lib文件夹了。</p></li>
-</ol>
-<h2 id="静态编译-pcl">静态编译 <a href="http://www.pointclouds.org" target="_blank" rel="external">PCL</a></h2>
-<p>借这个机会也把 <a href="http://www.pointclouds.org" target="_blank" rel="external">PCL</a> 从1.6升级到了1.7.2，基本流程和 <a href="http://opencv.org/" target="_blank" rel="external">OpenCV</a> 的编译方法差不多，但 PCL 依赖很多库，最精简的需要boost、Eigen、FLANN三个。</p>
-<p>静态编译 <a href="http://www.boost.org/" target="_blank" rel="external">boost</a> 主要参考 <a href="http://www.cnblogs.com/zhcncn/p/3950477.html" target="_blank" rel="external">zhcncn</a> 博客，仅编译 PCL 所需的模块，64位，静态编译。首先运行 <em>bootstrap.bat</em> ，然后执行如下命令 <figure class="highlight nix"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">b2 <span class="variable">--toolset=</span>msvc-<span class="number">14.0</span> --<span class="keyword">with</span>-chrono --<span class="keyword">with</span>-data_time  --<span class="keyword">with</span>-filesystem --<span class="keyword">with</span>-iostreams --<span class="keyword">with</span>-system --<span class="keyword">with</span>-thread <span class="variable">--stagedir=</span><span class="string">"$(your_dir)\bin\vc14"</span> <span class="variable">link=</span>static <span class="variable">runtime-link=</span>static <span class="variable">threading=</span>multi <span class="variable">address-model=</span><span class="number">64</span> debug release</span><br></pre></td></tr></table></figure></p>
-<p><a href="http://eigen.tuxfamily.org/" target="_blank" rel="external">Eigen</a> 不需要库文件，无需编译，需要说明的是必须使用最新版，旧版会报错。FLANN用VS2010的版本即可。</p>
-<p>准备好各项依赖后参考 <a href="#静态编译_OpenCV_3-0-0">静态编译 OpenCV 3.0.0</a> ，注意要手动添加依赖库的路径，FLANN需要添加具体的lib文件名。此外，需要指定 PCL 的安装路径，不建议放在默认的C盘，会因为没有权限最终无法安装。生成工程文件后不能着急直接编译，需要hack代码。由于 PCL 使用了已经淘汰的 <code>&lt;hash_map&gt;</code>，会引发错误，需要在所有的 <code>#include &lt;hash_map&gt;</code> 前添加 <figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="hexcolor">#def</span>ine _SILENCE_STDEXT_HASH_DEPRECATION_WARNINGS</span><br></pre></td></tr></table></figure></p>
-<p>以消除error。之后即可执行编译，同样在DEBUG和RELEASE下各执行一次。</p>
-<h2 id="动态链接库问题">动态链接库问题</h2>
-<p>之前在VS2010下没有问题，现在在VS2015的DEBUG下也没有问题，只有RELEASE会出错，具体表现是在主程序退出时对dll执行退出，产生 <em>unhandled exception</em> 。经过各种尝试发现是在dll中执行了从主线程的 <code>cv::Mat</code> 赋值，类似 <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="rule"><span class="attribute">cv</span>:<span class="value">:Mat mat_in_dll = mat_from_main</span></span>;</span><br></pre></td></tr></table></figure></p>
-<p>可能导致 <code>mat_in_dll</code> 在 dll 和 main 中析构了两次。之前也遇到过同样的问题，是从主程序传入了 vector。以后千万不要在dll中试图引入主程序的高级格式，比如 vector、string、cv::Mat等，自己定义的类可以引入，需要处理好析构。</p>
-<h1 id="安全创建子进程">安全创建子进程</h1>
-<p>由于需要在主程序中调用其他可执行文件产生子进程，而子进程的崩溃会导致主进程无法继续，该问题会导致整个程序卡死。参考<a href="http://blog.csdn.net/roofalison/article/details/3051916" target="_blank" rel="external">“windows下安全的创建子进程”</a>，我改写了如下函数 <figure class="highlight monkey"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">void safe_process(char * cmdLine, DWORD max_time) &#123;</span><br><span class="line">	TCHAR szCmdLine[MAX_PATH];<span class="preprocessor"></span><br><span class="line">#ifdef UNICODE</span></span><br><span class="line">	MultiByteToWideChar(CP_ACP, <span class="number">0</span>, cmdLine, -<span class="number">1</span>, szCmdLine, MAX_PATH);<span class="preprocessor"></span><br><span class="line">#<span class="keyword">else</span></span></span><br><span class="line">	strcpy(szCmdLine, cmdLine);<span class="preprocessor"></span><br><span class="line">#<span class="keyword">endif</span></span></span><br><span class="line">	STARTUPINFO si;</span><br><span class="line">	PROCESS_INFORMATION <span class="built_in">pi</span>;</span><br><span class="line">	ZeroMemory(&amp;si, sizeof(si));</span><br><span class="line">	si.cb = sizeof(si);</span><br><span class="line">	ZeroMemory(&amp;<span class="built_in">pi</span>, sizeof(<span class="built_in">pi</span>));</span><br><span class="line">	<span class="keyword">if</span> (CreateProcess(<span class="literal">NULL</span>, szCmdLine, <span class="number">0</span>, <span class="number">0</span>, <span class="literal">FALSE</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>, &amp;si, &amp;<span class="built_in">pi</span>)) &#123;</span><br><span class="line">		CloseHandle(<span class="built_in">pi</span>.hThread);</span><br><span class="line">		WaitForSingleObject(<span class="built_in">pi</span>.hProcess, max_time);</span><br><span class="line">		CloseHandle(<span class="built_in">pi</span>.hProcess);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
->>>>>>> d649a30ddb7334f9f871940a87b401ebc48d961a
 <p>当子进程发生错误无响应，父进程会判断超时从而继续。</p>
   
 	</div>
@@ -223,15 +177,9 @@
 
 
 <div class="next">
-<<<<<<< HEAD
 <a href="/2015/07/05/textile/"  title="textile试用">
  <strong>下一篇：</strong><br/> 
  <span>textile试用
-=======
-<a href="/2015/07/04/hello-world/"  title="博客开通，欢迎交流">
- <strong>下一篇：</strong><br/> 
- <span>博客开通，欢迎交流
->>>>>>> d649a30ddb7334f9f871940a87b401ebc48d961a
 </span>
 </a>
 </div>
@@ -250,11 +198,7 @@
   <div id="toc" class="toc-aside">
   <strong class="toc-title">文章目录</strong>
  
-<<<<<<< HEAD
  <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#关于VS2010"><span class="toc-number">1.</span> <span class="toc-text">关于VS2010</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#之前为什么要选择这个版本"><span class="toc-number">1.1.</span> <span class="toc-text">之前为什么要选择这个版本</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#为什么要放弃这个版本"><span class="toc-number">1.2.</span> <span class="toc-text">为什么要放弃这个版本</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#不能完全放弃"><span class="toc-number">1.3.</span> <span class="toc-text">不能完全放弃</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#迁移reconstruction项目"><span class="toc-number">2.</span> <span class="toc-text">迁移reconstruction项目</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#静态编译_OpenCV_3-0-0"><span class="toc-number">2.1.</span> <span class="toc-text">静态编译 OpenCV 3.0.0</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#静态编译_PCL"><span class="toc-number">2.2.</span> <span class="toc-text">静态编译 PCL</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#动态链接库问题"><span class="toc-number">2.3.</span> <span class="toc-text">动态链接库问题</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#安全创建子进程"><span class="toc-number">3.</span> <span class="toc-text">安全创建子进程</span></a></li></ol>
-=======
- <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#关于vs2010"><span class="toc-number">1.</span> <span class="toc-text">关于VS2010</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#之前为什么要选择这个版本"><span class="toc-number">1.1.</span> <span class="toc-text">之前为什么要选择这个版本</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#为什么要放弃这个版本"><span class="toc-number">1.2.</span> <span class="toc-text">为什么要放弃这个版本</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#不能完全放弃"><span class="toc-number">1.3.</span> <span class="toc-text">不能完全放弃</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#迁移reconstruction项目"><span class="toc-number">2.</span> <span class="toc-text">迁移reconstruction项目</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#静态编译-opencv-3.0.0"><span class="toc-number">2.1.</span> <span class="toc-text">静态编译 OpenCV 3.0.0</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#静态编译-pcl"><span class="toc-number">2.2.</span> <span class="toc-text">静态编译 PCL</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#动态链接库问题"><span class="toc-number">2.3.</span> <span class="toc-text">动态链接库问题</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#安全创建子进程"><span class="toc-number">3.</span> <span class="toc-text">安全创建子进程</span></a></li></ol>
->>>>>>> d649a30ddb7334f9f871940a87b401ebc48d961a
  
   </div>
 
@@ -268,11 +212,7 @@
 		<ul>
 		
 		  
-<<<<<<< HEAD
 			<li><a href="/categories/hexo/" title="hexo">hexo<sup>2</sup></a></li>
-=======
-			<li><a href="/categories/hexo/" title="hexo">hexo<sup>1</sup></a></li>
->>>>>>> d649a30ddb7334f9f871940a87b401ebc48d961a
 		  
 		
 		  
@@ -291,11 +231,7 @@
   <div class="tagcloudlist">
     <p class="asidetitle">标签云</p>
     <div class="tagcloudlist clearfix">
-<<<<<<< HEAD
        <a href="/tags/CNN/" style="font-size: 10px;">CNN</a> <a href="/tags/OpenCV/" style="font-size: 10px;">OpenCV</a> <a href="/tags/PCL/" style="font-size: 10px;">PCL</a> <a href="/tags/boost/" style="font-size: 10px;">boost</a> <a href="/tags/dll/" style="font-size: 10px;">dll</a> <a href="/tags/markdown/" style="font-size: 10px;">markdown</a> <a href="/tags/textile/" style="font-size: 10px;">textile</a> <a href="/tags/建站/" style="font-size: 10px;">建站</a>
-=======
-       <a href="/tags/CNN/" style="font-size: 10px;">CNN</a> <a href="/tags/OpenCV/" style="font-size: 10px;">OpenCV</a> <a href="/tags/PCL/" style="font-size: 10px;">PCL</a> <a href="/tags/boost/" style="font-size: 10px;">boost</a> <a href="/tags/dll/" style="font-size: 10px;">dll</a> <a href="/tags/建站/" style="font-size: 10px;">建站</a>
->>>>>>> d649a30ddb7334f9f871940a87b401ebc48d961a
     </div>
   </div>
 
@@ -317,13 +253,10 @@
       </li>
     
       <li>
-<<<<<<< HEAD
         <a href="/2015/07/05/textile/">textile试用</a>
       </li>
     
       <li>
-=======
->>>>>>> d649a30ddb7334f9f871940a87b401ebc48d961a
         <a href="/2015/07/04/hello-world/">博客开通，欢迎交流</a>
       </li>
     
