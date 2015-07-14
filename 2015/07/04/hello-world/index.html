@@ -1,0 +1,575 @@
+
+ <!DOCTYPE HTML>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  
+    <title>博客开通，欢迎交流 | LD99&#39;s Blog</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
+    
+    <meta name="author" content="Liang Ding">
+    
+
+    
+    <meta name="description" content="一直觉得应该有这么个东西，把日常遇到的技术问题和发现记录下来，和大家分享，但又觉得以前错过了太多太多，现在再开始已经来不及，其实什么时候开始都不算晚。花了一天时间建好了本站，下面写一些在建站时经历和遇到的问题。
+本站基于Github Pages和Hexo，使用了jacman模板，参考Zipperary完成了绝大部分配置。下面按先后顺序简要介绍配置过程。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="博客开通，欢迎交流">
+<meta property="og:url" content="http://ld99.top/2015/07/04/hello-world/index.html">
+<meta property="og:site_name" content="LD99's Blog">
+<meta property="og:description" content="一直觉得应该有这么个东西，把日常遇到的技术问题和发现记录下来，和大家分享，但又觉得以前错过了太多太多，现在再开始已经来不及，其实什么时候开始都不算晚。花了一天时间建好了本站，下面写一些在建站时经历和遇到的问题。
+本站基于Github Pages和Hexo，使用了jacman模板，参考Zipperary完成了绝大部分配置。下面按先后顺序简要介绍配置过程。">
+<meta property="og:updated_time" content="2015-07-09T02:11:17.863Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="博客开通，欢迎交流">
+<meta name="twitter:description" content="一直觉得应该有这么个东西，把日常遇到的技术问题和发现记录下来，和大家分享，但又觉得以前错过了太多太多，现在再开始已经来不及，其实什么时候开始都不算晚。花了一天时间建好了本站，下面写一些在建站时经历和遇到的问题。
+本站基于Github Pages和Hexo，使用了jacman模板，参考Zipperary完成了绝大部分配置。下面按先后顺序简要介绍配置过程。">
+
+    
+    <link rel="alternative" href="/atom.xml" title="LD99&#39;s Blog" type="application/atom+xml">
+    
+    
+    <link rel="icon" href="/img/favicon.ico">
+    
+    
+    <link rel="apple-touch-icon" href="/img/jacman.png">
+    <link rel="apple-touch-icon-precomposed" href="/img/jacman.png">
+    
+    <link rel="stylesheet" href="/css/style.css" type="text/css">
+</head>
+
+  <body>
+    <header>
+      
+<div>
+		
+			<div id="imglogo">
+				<a href="/"><img src="/img/logo.ico" alt="LD99&#39;s Blog" title="LD99&#39;s Blog"/></a>
+			</div>
+			
+			<div id="textlogo">
+				<h1 class="site-name"><a href="/" title="LD99&#39;s Blog">LD99&#39;s Blog</a></h1>
+				<h2 class="blog-motto">记录学习工作中的点点滴滴</h2>
+			</div>
+			<div class="navbar"><a class="navbutton navmobile" href="#" title="菜单">
+			</a></div>
+			<nav class="animated">
+				<ul>
+					<ul>
+					 
+						<li><a href="/">主页</a></li>
+					
+						<li><a href="/archives">归档</a></li>
+					
+						<li><a href="/about">About me</a></li>
+					
+					<li>
+ 					
+						<form class="search">
+							<label>Search</label>
+						<input type="text" id="ts-search-input" name="q" size="30" placeholder="搜索"><br>
+						</form>
+					
+					</li>
+				</ul>
+			</nav>			
+</div>
+    </header>
+    <div id="container">
+      <div id="main" class="post" itemscope itemprop="blogPost">
+  
+	<article itemprop="articleBody"> 
+		<header class="article-info clearfix">
+  <h1 itemprop="name">
+    
+      <a href="/2015/07/04/hello-world/" title="博客开通，欢迎交流" itemprop="url">博客开通，欢迎交流</a>
+  </h1>
+  <p class="article-author">By
+       
+		<a href="/about" title="Liang Ding" target="_blank" itemprop="author">Liang Ding</a>
+		
+  <p class="article-time">
+    <time datetime="2015-07-04T14:31:10.000Z" itemprop="datePublished"> 发表于 2015-07-04</time>
+    
+  </p>
+</header>
+	<div class="article-content">
+		
+		<div id="toc" class="toc-article">
+			<strong class="toc-title">文章目录</strong>
+		
+			<ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#hello-world"><span class="toc-number">1.</span> <span class="toc-text">Hello World</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#配置主题"><span class="toc-number">2.</span> <span class="toc-text">配置主题</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#添加社交网站超链接"><span class="toc-number">2.1.</span> <span class="toc-text">添加社交网站超链接</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#添加多说评论系统"><span class="toc-number">2.1.1.</span> <span class="toc-text">添加多说评论系统</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#添加访问量统计"><span class="toc-number">2.2.</span> <span class="toc-text">添加访问量统计</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#添加搜索"><span class="toc-number">2.3.</span> <span class="toc-text">添加搜索</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#购买域名"><span class="toc-number">3.</span> <span class="toc-text">购买域名</span></a></li></ol>
+		
+		</div>
+		
+		<p>一直觉得应该有这么个东西，把日常遇到的技术问题和发现记录下来，和大家分享，但又觉得以前错过了太多太多，现在再开始已经来不及，其实什么时候开始都不算晚。花了一天时间建好了本站，下面写一些在建站时经历和遇到的问题。</p>
+<p>本站基于<a href="pages.github.com">Github Pages</a>和<a href="http://hexo.io/" target="_blank" rel="external">Hexo</a>，使用了<a href="https://github.com/wuchong/jacman" target="_blank" rel="external">jacman</a>模板，参考<a href="http://zipperary.com/categories/hexo/" target="_blank" rel="external">Zipperary</a>完成了绝大部分配置。下面按先后顺序简要介绍配置过程。</p>
+<a id="more"></a>
+<h1 id="hello-world">Hello World</h1>
+<p>建立一个<code>hello world</code>并没想象容易。按先后顺序安装<em>nvm</em>、<em>nodejs</em>、<em>npm</em>、<em>hexo</em>，遇到一些小问题，主要是顺序要搞对。安装完就可以在本地生成预览页面了。之后关联到<a href="https://github.com/" target="_blank" rel="external">Github</a>即可拥有一个<a href="http://seed93.github.io" target="_blank" rel="external">*.github.io</a>的主页。</p>
+<h1 id="配置主题">配置主题</h1>
+<p>先对<a href="http://hexo.io/" target="_blank" rel="external">Hexo</a>本身的<code>_config.yml</code>进行配置，然后选择了<a href="https://github.com/wuchong/jacman" target="_blank" rel="external">jacman</a> 主题，对该主题进行进一步定制。大部分时间花在了这里。</p>
+<h2 id="添加社交网站超链接">添加社交网站超链接</h2>
+<p>本来是一件很简单的事，<a href="https://github.com/wuchong/jacman" target="_blank" rel="external">jacman</a> 主题已经支持很多社交网站，但我想加入<a href="http://www.renren.com" target="_blank" rel="external">人人</a>和<a href="http://tuchong.com" target="_blank" rel="external">图虫</a>，所以首先需要改掉<code>footer.ejs</code>文件，很容易加入了链接，但是要选择对应的icon，这是个麻烦事。该主题的icon放在字体文件里，每个icon有一个序号索引，需要在字体文件中找到对应索引，如果没有需要的图标还需要自己手动添加到字体文件中。我选择了<a href="http://www.fontlab.com/font-editor/typetool/" target="_blank" rel="external">typetool</a>软件来编辑字体文件，打开<code>fontdiao.ttf</code>即可看到各种图标，其中包含了<a href="http://www.renren.com" target="_blank" rel="external">人人</a>的，只需要读取索引即可。而<a href="http://tuchong.com" target="_blank" rel="external">图虫</a>这个网站并不多见，网上也没有找到合适的logo，最后决定自己添加一个<code>图</code>字作为图标。下载好字体，由于不会搜索，翻了好久才在几千个汉字中找到它，复制粘贴到<code>fontdiao.ttf</code>中，另存为，大功告成。加载使用后发现没有生效，可能是除了<code>.ttf</code>要修改外，其他格式的字体也需要同步修改。没有一个合适的离线软件，在线网站<a href="http://www.fontsquirrel.com/tools/webfont-generator" target="_blank" rel="external">font squirrel</a>生成的字体只支持常用标点字符，最后使用<a href="http://www.font2web.com/" target="_blank" rel="external">font2web</a>得到完整的字体包。后来还遇到了浏览器缓存的问题，需要清除缓存才可以重新加载。至此，网页上链接了8个个人社交网站，欢迎访问。</p>
+<h3 id="添加多说评论系统">添加多说评论系统</h3>
+<p>该主题对<a href="http://duoshuo.com/" target="_blank" rel="external">多说</a>支持很好，多说本身也比较简单易用，配置过程中没有花费太多经历，一次成功。 后来手动添加了最近访客和最新评论，这两个widget在原主题是没有的，自己从<a href="http://duoshuo.com/" target="_blank" rel="external">多说</a>上找到了相应代码，照猫画虎添加了这两个widget。其中最近访客没有边框，于是手动添加了一个<code>div</code>搞定。</p>
+<h2 id="添加访问量统计">添加访问量统计</h2>
+<p>先是在<a href="http://service.ibruce.info/" target="_blank" rel="external">bruce</a>看到了可以统计访问量，简单添加后真的work了，只不过自己加的位置比较糟糕。后来看到该主题支持百度统计，于是注册了后者，百度统计已经更新代码，主题还没有同步更新。使用百度统计后发现<code>hexo g</code>以后<code>index.html</code>会出现无法解析<code>analytics.ejs</code>文件的情况。<code>hexo clean</code>后删除该文件，<code>index.html</code>居然不会变，看上去和<code>analytics.ejs</code>文件毫无关系，但如果改一下<code>&lt;%- partial('analytics') %&gt;</code>的文件名就会有变化。<del>最后解决办法是改文件名，原因未知。</del>已经发现原因，使用gedit编辑文件时产生了<code>~</code>，在读取时候读的是旧文件。PS：百度统计只是静默统计，用于主页所有者后台分析，不会实时显示访问量。</p>
+<h2 id="添加搜索">添加搜索</h2>
+<p>参考<a href="http://gengbiao.me/hexo/hexo%E6%B7%BB%E5%8A%A0%E7%99%BE%E5%BA%A6%E7%AB%99%E5%86%85%E6%90%9C%E7%B4%A2/" target="_blank" rel="external">coney</a>的文章，一步步艰难做完，发现到最后<a href="https://github.com/coneycode/hexo-generator-baidu-sitemap" target="_blank" rel="external">Github</a>项目上的时候，被告知<a href="http://www.baidu.com" target="_blank" rel="external">baidu</a>无法抓取<a href="https://github.com/" target="_blank" rel="external">Github</a>内容了，于是放弃。 转而使用<a href="http://tinysou.com/" target="_blank" rel="external">tinysou</a>，这个很简单，有一个短短的视频，边看边做几分钟搞定，效果还很不错。</p>
+<h1 id="购买域名">购买域名</h1>
+<p>大部分博客推荐在<a href="https://www.godaddy.com" target="_blank" rel="external">Godadday</a>网站购买，我看了一下并没有想要的，而且稍贵，最后选择在<a href="http://www.net.cn/" target="_blank" rel="external">万网</a>购买，<code>seed93</code>的域名大部分都有，而且也不贵，但是名字略长，还是想买个短一点的，就还是选了<code>ld99</code>，<code>.com</code>和<code>.cn</code>都被注册了，<code>.net</code>不是很喜欢，最后选择了<code>.top</code>，这个国际顶级域名是去年年底开放注册的，<code>top</code>意味着最顶级，正好我的名也是<code>ding</code>这个谐音，域名一共7个字符，也比较简单，就这样决定。接下来就是关联<a href="https://www.dnspod.cn" target="_blank" rel="external">DNSPOD</a>，一开始总是无法访问，原因是我绑定了<code>*.ld99.top</code>的二级域名，一级域名没有绑定。<del>目前的问题是我自己<code>ubuntu</code>系统用firefox无法访问自己主页，会被铁通DNS解析错，但是ping的时候却可以显示解析到了<a href="https://github.com/" target="_blank" rel="external">Github</a>，该问题待解。虚拟机没有问题。</del>过了一天这个问题自己好了，可能是铁通DNS 更新延迟。</p>
+  
+	</div>
+		<footer class="article-footer clearfix">
+<div class="article-catetags">
+
+<div class="article-categories">
+  <span></span>
+  <a class="article-category-link" href="/categories/hexo/">hexo</a>
+</div>
+
+
+  <div class="article-tags">
+  
+  <span></span> <a href="/tags/建站/">建站</a>
+  </div>
+
+</div>
+
+
+
+	<div class="article-share" id="share">
+	
+	  <div data-url="http://ld99.top/2015/07/04/hello-world/" data-title="博客开通，欢迎交流 | LD99&#39;s Blog" data-tsina="1951133423" class="share clearfix">
+	  </div>
+	
+	</div>
+
+
+</footer>
+
+   	       
+	</article>
+	
+<nav class="article-nav clearfix">
+ 
+ <div class="prev" >
+ <a href="/2015/07/07/项目从VS2010迁移到VS2015/" title="项目从VS2010迁移到VS2015">
+  <strong>上一篇：</strong><br/>
+  <span>
+  项目从VS2010迁移到VS2015</span>
+</a>
+</div>
+
+
+</nav>
+
+	
+<section id="comments" class="comment">
+	<div class="ds-thread" data-thread-key="2015/07/04/hello-world/" data-title="博客开通，欢迎交流" data-url="http://ld99.top/2015/07/04/hello-world/"></div>
+</section>
+
+
+</div>  
+      <div class="openaside"><a class="navbutton" href="#" title="显示侧边栏"></a></div>
+
+  <div id="toc" class="toc-aside">
+  <strong class="toc-title">文章目录</strong>
+ 
+ <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#hello-world"><span class="toc-number">1.</span> <span class="toc-text">Hello World</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#配置主题"><span class="toc-number">2.</span> <span class="toc-text">配置主题</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#添加社交网站超链接"><span class="toc-number">2.1.</span> <span class="toc-text">添加社交网站超链接</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#添加多说评论系统"><span class="toc-number">2.1.1.</span> <span class="toc-text">添加多说评论系统</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#添加访问量统计"><span class="toc-number">2.2.</span> <span class="toc-text">添加访问量统计</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#添加搜索"><span class="toc-number">2.3.</span> <span class="toc-text">添加搜索</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#购买域名"><span class="toc-number">3.</span> <span class="toc-text">购买域名</span></a></li></ol>
+ 
+  </div>
+
+<div id="asidepart">
+<div class="closeaside"><a class="closebutton" href="#" title="隐藏侧边栏"></a></div>
+<aside class="clearfix">
+
+  
+<div class="categorieslist">
+	<p class="asidetitle">分类</p>
+		<ul>
+		
+		  
+			<li><a href="/categories/hexo/" title="hexo">hexo<sup>1</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/theory/" title="theory">theory<sup>1</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/工程配置/" title="工程配置">工程配置<sup>1</sup></a></li>
+		  
+		
+		</ul>
+</div>
+
+
+  
+  <div class="tagcloudlist">
+    <p class="asidetitle">标签云</p>
+    <div class="tagcloudlist clearfix">
+       <a href="/tags/CNN/" style="font-size: 10px;">CNN</a> <a href="/tags/OpenCV/" style="font-size: 10px;">OpenCV</a> <a href="/tags/PCL/" style="font-size: 10px;">PCL</a> <a href="/tags/boost/" style="font-size: 10px;">boost</a> <a href="/tags/dll/" style="font-size: 10px;">dll</a> <a href="/tags/建站/" style="font-size: 10px;">建站</a>
+    </div>
+  </div>
+
+
+  
+  <div class="linkslist">
+  <p class="asidetitle">最新发布</p>
+    
+      <li>
+        <a href="/2015/07/14/CNN-theory-tutorial/">CNN theory tutorial</a>
+      </li>
+    
+      <li>
+        <a href="/2015/07/07/项目从VS2010迁移到VS2015/">项目从VS2010迁移到VS2015</a>
+      </li>
+    
+      <li>
+        <a href="/2015/07/04/hello-world/">博客开通，欢迎交流</a>
+      </li>
+    
+  </div>
+
+
+  
+<div class="weiboshow">
+<p class="asidetitle">最新评论</p>
+	<div class="visitors">
+		<ul class="ds-recent-comments" data-num-items="5" data-show-avatars="1" data-show-time="1" data-show-admin="1" data-excerpt-length="70"></ul>
+	</div>
+</div>
+
+
+  
+<div class="weiboshow">
+	<p class="asidetitle">最近访客</p>
+	<div class="visitors">
+		<ul class="ds-recent-visitors" data-num-items="5"></ul>
+	</div>
+</div>
+
+
+
+  <div class="weiboshow">
+  <p class="asidetitle">新浪微博</p>
+    <iframe width="100%" height="119" class="share_self"  frameborder="0" scrolling="no" src="http://widget.weibo.com/weiboshow/index.php?language=&width=0&height=119&fansRow=2&ptype=1&speed=0&skin=9&isTitle=1&noborder=1&isWeibo=0&isFans=0&uid=1951133423&verifier=5e722f59&dpc=1"></iframe>
+</div>
+
+
+</aside>
+</div>
+    </div>
+    <footer><div id="footer" >
+	
+	<div class="line">
+		<span></span>
+		<div class="author"></div>
+	</div>
+	
+	
+	<section class="info">
+		<p> Hello, I&#39;m Liang Ding. <br/>
+			This is my blog to push myself to leave something behind.</p>
+	</section>
+	 
+	<div class="social-font" class="clearfix">
+		
+		<a href="http://weibo.com/seed93" target="_blank" class="icon-weibo" title="微博"></a>
+		
+		
+		<a href="https://github.com/seed93" target="_blank" class="icon-github" title="github"></a>
+		
+		
+		
+		
+		<a href="https://www.facebook.com/seeds93" target="_blank" class="icon-facebook" title="facebook"></a>
+		
+		
+		<a href="https://www.linkedin.com/in/seed93" target="_blank" class="icon-linkedin" title="linkedin"></a>
+		
+		
+		
+		<a href="http://www.zhihu.com/people/seed93" target="_blank" class="icon-zhihu" title="知乎"></a>
+		
+		
+		
+		<a href="mailto:liangding1990@163.com" target="_blank" class="icon-email" title="Email Me"></a>
+		
+		
+		<a href="http://seed93.tuchong.com" target="_blank" class="icon-tuchong" title="图虫"></a>
+		
+		
+		<a href="http://www.renren.com/ld99" target="_blank" class="icon-renren" title="人人"></a>
+		
+	</div>
+			
+		
+
+		<p class="copyright">
+		Powered by <a href="http://hexo.io" target="_blank" title="hexo">hexo</a> and Theme by <a href="https://github.com/wuchong/jacman" target="_blank" title="Jacman">Jacman</a> © 2015 
+		
+		<a href="/about" target="_blank" title="Liang Ding">Liang Ding</a>
+		
+		<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+		</script>
+		<br/>
+		<span id="busuanzi_container_site_uv">
+		  您是本站第<span id="busuanzi_value_site_uv"></span>位访客
+		</span>
+
+		</p>
+</div></footer>
+    <script src="/js/jquery-2.0.3.min.js"></script>
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+<script src="/js/jquery.qrcode-0.12.0.min.js"></script>
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  $('.navbar').click(function(){
+    $('header nav').toggleClass('shownav');
+  });
+  var myWidth = 0;
+  function getSize(){
+    if( typeof( window.innerWidth ) == 'number' ) {
+      myWidth = window.innerWidth;
+    } else if( document.documentElement && document.documentElement.clientWidth) {
+      myWidth = document.documentElement.clientWidth;
+    };
+  };
+  var m = $('#main'),
+      a = $('#asidepart'),
+      c = $('.closeaside'),
+      o = $('.openaside');
+  c.click(function(){
+    a.addClass('fadeOut').css('display', 'none');
+    o.css('display', 'block').addClass('fadeIn');
+    m.addClass('moveMain');
+  });
+  o.click(function(){
+    o.css('display', 'none').removeClass('beforeFadeIn');
+    a.css('display', 'block').removeClass('fadeOut').addClass('fadeIn');      
+    m.removeClass('moveMain');
+  });
+  $(window).scroll(function(){
+    o.css("top",Math.max(80,260-$(this).scrollTop()));
+  });
+  
+  $(window).resize(function(){
+    getSize(); 
+    if (myWidth >= 1024) {
+      $('header nav').removeClass('shownav');
+    }else{
+      m.removeClass('moveMain');
+      a.css('display', 'block').removeClass('fadeOut');
+      o.css('display', 'none');
+      
+      $('#toc.toc-aside').css('display', 'none');
+        
+    }
+  });
+});
+</script>
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  var ai = $('.article-content>iframe'),
+      ae = $('.article-content>embed'),
+      t  = $('#toc'),
+      ta = $('#toc.toc-aside'),
+      o  = $('.openaside'),
+      c  = $('.closeaside');
+  if(ai.length>0){
+    ai.wrap('<div class="video-container" />');
+  };
+  if(ae.length>0){
+   ae.wrap('<div class="video-container" />');
+  };
+  c.click(function(){
+    ta.css('display', 'block').addClass('fadeIn');
+  });
+  o.click(function(){
+    ta.css('display', 'none');
+  });
+  $(window).scroll(function(){
+    ta.css("top",Math.max(140,320-$(this).scrollTop()));
+  });
+});
+</script>
+
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  var $this = $('.share'),
+      url = $this.attr('data-url'),
+      encodedUrl = encodeURIComponent(url),
+      title = $this.attr('data-title'),
+      tsina = $this.attr('data-tsina'),
+      description = $this.attr('description');
+  var html = [
+  '<div class="hoverqrcode clearfix"></div>',
+  '<a class="overlay" id="qrcode"></a>',
+  '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
+  '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
+  '<a href="#qrcode" class="article-share-qrcode" title="微信"></a>',
+  '<a href="http://widget.renren.com/dialog/share?resourceUrl=' + encodedUrl + '&srcUrl=' + encodedUrl + '&title=' + title +'" class="article-share-renren" target="_blank" title="人人"></a>',
+  '<a href="http://service.weibo.com/share/share.php?title='+title+'&url='+encodedUrl +'&ralateUid='+ tsina +'&searchPic=true&style=number' +'" class="article-share-weibo" target="_blank" title="微博"></a>',
+  '<span title="Share to"></span>'
+  ].join('');
+  $this.append(html);
+
+  $('.hoverqrcode').hide();
+
+  var myWidth = 0;
+  function updatehoverqrcode(){
+    if( typeof( window.innerWidth ) == 'number' ) {
+      myWidth = window.innerWidth;
+    } else if( document.documentElement && document.documentElement.clientWidth) {
+      myWidth = document.documentElement.clientWidth;
+    };
+    var qrsize = myWidth > 1024 ? 200:100;
+    var options = {render: 'image', size: qrsize, fill: '#2ca6cb', text: url, radius: 0.5, quiet: 1};
+    var p = $('.article-share-qrcode').position();
+    $('.hoverqrcode').empty().css('width', qrsize).css('height', qrsize)
+                          .css('left', p.left-qrsize/2+20).css('top', p.top-qrsize-10)
+                          .qrcode(options);
+  };
+  $(window).resize(function(){
+    $('.hoverqrcode').hide();
+  });
+  $('.article-share-qrcode').click(function(){
+    updatehoverqrcode();
+    $('.hoverqrcode').toggle();
+  });
+  $('.article-share-qrcode').hover(function(){}, function(){
+      $('.hoverqrcode').hide();
+  });
+});   
+</script>
+
+
+
+<script type="text/javascript">
+  var duoshuoQuery = {short_name:"seed93"};
+  (function() {
+    var ds = document.createElement('script');
+    ds.type = 'text/javascript';ds.async = true;
+    ds.src = '//static.duoshuo.com/embed.js';
+    ds.charset = 'UTF-8';
+    (document.getElementsByTagName('head')[0] 
+    || document.getElementsByTagName('body')[0]).appendChild(ds);
+  })();
+</script> 
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){ 
+  $('.article-content').each(function(i){
+    $(this).find('img').each(function(){
+      if ($(this).parent().hasClass('fancybox')) return;
+      var alt = this.alt;
+      if (alt) $(this).after('<span class="caption">' + alt + '</span>');
+      $(this).wrap('<a href="' + this.src + '" title="' + alt + '" class="fancybox"></a>');
+    });
+    $(this).find('.fancybox').each(function(){
+      $(this).attr('rel', 'article' + i);
+    });
+  });
+  if($.fancybox){
+    $('.fancybox').fancybox();
+  }
+}); 
+</script>
+
+
+
+<!-- Analytics Begin -->
+
+
+
+<script type="text/javascript">
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F88bcf943a1b21c23e32ff811f20f992d' type='text/javascript'%3E%3C/script%3E"));
+</script>
+
+
+
+<!-- Analytics End -->
+
+<!-- Totop Begin -->
+
+	<div id="totop">
+	<a title="返回顶部"><img src="/img/scrollup.png"/></a>
+	</div>
+	<script src="/js/totop.js"></script>
+
+<!-- Totop End -->
+
+<!-- MathJax Begin -->
+<!-- mathjax config similar to math.stackexchange -->
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+    });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+<!-- MathJax End -->
+
+<!-- Tiny_search Begin -->
+
+<script>
+var option = {
+  engineKey: 'bcfeed8ef4e8cbb8f82a'
+};
+(function(w,d,t,u,n,s,e){
+  s = d.createElement(t);
+  s.src = u;
+  s.async = 1;
+  w[n] = function(r){
+    w[n].opts = r;
+  };
+  e = d.getElementsByTagName(t)[0];
+  e.parentNode.insertBefore(s, e);
+})(window,document,'script','//tinysou-cdn.b0.upaiyun.com/ts.js','_ts');
+_ts(option);
+</script>
+
+<!-- Tiny_search End -->
+
+  </body>
+</html>
