@@ -95,23 +95,22 @@
         
         
 
-<style type="text/css">
-<!--
-#pdf {
-width: 600px;
-height: 450px;
-}
--->
-</style>
-
-<div id="pdf">
-<object data="source/DeepLearningTutorialClass1.pdf#toolbar=1&amp;navpanes=0&amp;scrollbar=1&amp;page=1&amp;view=FitH" type="application/pdf" width="100%" height="100%">
-
-<p>少年，你怎么可以没有pdf阅读器，用火狐，你值得拥有。当然，你也可以<a href="source/DeepLearningTutorialClass1.pdf">下载</a></p>
-
-</object>
-</div>
-
+	<style type="text/css">
+	<!--
+	#pdf {
+	width: 100%;
+	height: 600px;
+	}
+	-->
+	</style>
+	<script type="text/javascript" src="/js/pdfobject.min.js"></script>
+	<script type="text/javascript">
+      window.onload = function (){
+        var success = new PDFObject({ url: "/source/DeepLearningTutorialClass1.pdf" }).embed("pdf");
+        console.log(success);
+      };
+    </script>
+	<div id="pdf">It appears you don't have Adobe Reader or PDF support in this web browser. <a href="/source/DeepLearningTutorialClass1.pdf">Click here to download the PDF</a></div>
 
         
         
@@ -174,8 +173,12 @@ height: 450px;
 </header>
     <div class="article-content">
         
-        <h1 id="Release_code">Release code</h1><p><a href="https://github.com/seed93/reconstruction" target="_blank" rel="external">reconstruction</a>项目迁移到VS2015后，重新整理了两个版本的代码，在SVN和github上双重备份，并在<a href="https://github.com/" target="_blank" rel="external">github</a>上发布了两个平台下的<a href="">Demo</a></p>
-<h1 id="Texture_Mapping">Texture Mapping</h1><h1 id="CLSTM_Demo_&amp;_gcc_5-1_installation">CLSTM Demo &amp; gcc 5.1 installation</h1>
+        <a id="more"></a>
+<h1 id="Release_code">Release code</h1><p><a href="https://github.com/seed93/reconstruction" target="_blank" rel="external">reconstruction</a>项目迁移到VS2015后，重新整理了两个版本的代码，在SVN和github上双重备份，并在<a href="https://github.com/" target="_blank" rel="external">github</a>上发布了两个平台下的<a href="">Demo</a></p>
+<h1 id="Texture_Mapping">Texture Mapping</h1>
+<iframe height="100%" src="/source/loadply.html" width="100%"></iframe> 
+
+<h1 id="CLSTM_Demo_&amp;_gcc_5-1_installation">CLSTM Demo &amp; gcc 5.1 installation</h1>
         
         
         <p class="article-more-link">
