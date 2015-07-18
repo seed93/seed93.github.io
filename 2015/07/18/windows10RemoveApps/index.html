@@ -4,22 +4,24 @@
 <head>
   <meta charset="UTF-8">
   
-    <title>LD99&#39;s Blog</title>
+    <title>卸载windows 10系统应用 | LD99&#39;s Blog</title>
     <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
     
     <meta name="author" content="Liang Ding">
     
 
     
-    <meta name="description" content="记录学习工作中的点点滴滴">
-<meta property="og:type" content="website">
-<meta property="og:title" content="LD99's Blog">
-<meta property="og:url" content="http://ld99.top/index.html">
+    <meta name="description" content="最近Windows 10更新了10240版本，虽然官方没有说这就是RTM版，但从10166到10240变化这么大（虽然我没体会出除了版本号的变化之外的变化），大部分人倾向于认为这就是所谓的RTM了。由于从10166版本后系统自带的OneNote就会出现“很抱歉，出现问题，无法登录，请稍后尝试”的错误，延续到10240，花了一点时间来解决该问题。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="卸载windows 10系统应用">
+<meta property="og:url" content="http://ld99.top/2015/07/18/windows10RemoveApps/index.html">
 <meta property="og:site_name" content="LD99's Blog">
-<meta property="og:description" content="记录学习工作中的点点滴滴">
+<meta property="og:description" content="最近Windows 10更新了10240版本，虽然官方没有说这就是RTM版，但从10166到10240变化这么大（虽然我没体会出除了版本号的变化之外的变化），大部分人倾向于认为这就是所谓的RTM了。由于从10166版本后系统自带的OneNote就会出现“很抱歉，出现问题，无法登录，请稍后尝试”的错误，延续到10240，花了一点时间来解决该问题。">
+<meta property="og:image" content="http://i1.tietuku.com/6bd0b7565850e066.jpg">
+<meta property="og:updated_time" content="2015-07-18T09:29:51.423Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="LD99's Blog">
-<meta name="twitter:description" content="记录学习工作中的点点滴滴">
+<meta name="twitter:title" content="卸载windows 10系统应用">
+<meta name="twitter:description" content="最近Windows 10更新了10240版本，虽然官方没有说这就是RTM版，但从10166到10240变化这么大（虽然我没体会出除了版本号的变化之外的变化），大部分人倾向于认为这就是所谓的RTM了。由于从10166版本后系统自带的OneNote就会出现“很抱歉，出现问题，无法登录，请稍后尝试”的错误，延续到10240，花了一点时间来解决该问题。">
 
     
     <link rel="alternative" href="/atom.xml" title="LD99&#39;s Blog" type="application/atom+xml">
@@ -72,12 +74,10 @@
 </div>
     </header>
     <div id="container">
-      <div id="main">
-
-   
-    
-    <article class="post-expand post" itemprop="articleBody"> 
-        <header class="article-info clearfix">
+      <div id="main" class="post" itemscope itemprop="blogPost">
+  
+	<article itemprop="articleBody"> 
+		<header class="article-info clearfix">
   <h1 itemprop="name">
     
       <a href="/2015/07/18/windows10RemoveApps/" title="卸载windows 10系统应用" itemprop="url">卸载windows 10系统应用</a>
@@ -91,18 +91,28 @@
     
   </p>
 </header>
-    <div class="article-content">
-        
-        <p>最近Windows 10更新了10240版本，虽然官方没有说这就是RTM版，但从10166到10240变化这么大（虽然我没体会出除了版本号的变化之外的变化），大部分人倾向于认为这就是所谓的RTM了。由于从10166版本后系统自带的OneNote就会出现“很抱歉，出现问题，无法登录，请稍后尝试”的错误，延续到10240，花了一点时间来解决该问题。</p>
-        
-        
-        <p class="article-more-link">
-          
-            <a href="/2015/07/18/windows10RemoveApps/#more">Read More</a>
-          
-       </p>
-    </div>
-    <footer class="article-footer clearfix">
+	<div class="article-content">
+		
+		<div id="toc" class="toc-article">
+			<strong class="toc-title">文章目录</strong>
+		
+			<ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#卸载系统应用"><span class="toc-number">1.</span> <span class="toc-text">卸载系统应用</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Windows_10已知bug"><span class="toc-number">2.</span> <span class="toc-text">Windows 10已知bug</span></a></li></ol>
+		
+		</div>
+		
+		<p>最近Windows 10更新了10240版本，虽然官方没有说这就是RTM版，但从10166到10240变化这么大（虽然我没体会出除了版本号的变化之外的变化），大部分人倾向于认为这就是所谓的RTM了。由于从10166版本后系统自带的OneNote就会出现“很抱歉，出现问题，无法登录，请稍后尝试”的错误，延续到10240，花了一点时间来解决该问题。</p>
+<a id="more"></a>
+<h1 id="卸载系统应用">卸载系统应用</h1><p>网上没有找到现成的方法，只好尝试卸载系统应用，重新安装。参考<a href="http://www.xitonghe.com/jiaocheng/Windows10-1075.html" target="_blank" rel="external">这篇文章</a>卸载即可，第一步找到<code>WindowsPowerShell</code>，右击管理员运行，然后使用<code>get-appxpackage</code>模糊查找到OneNote的记录，最后remove。连起来就是<br><figure class="highlight gherkin"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">get-appxpackage <span class="keyword">*</span>OneNote<span class="keyword">*</span> |<span class="string"> remove-appxpackage</span></span><br></pre></td></tr></table></figure></p>
+<p>卸载后使用应用商店重新安装，OneNote重建光明。<br><img src="http://i1.tietuku.com/6bd0b7565850e066.jpg" alt="Win10自带OneNote" title="Win10自带OneNote"></p>
+<h1 id="Windows_10已知bug">Windows 10已知bug</h1><ul>
+<li><p>显卡问题从使用windows 10以来就没有解决过，我的机器是ThinkPad S1 Yoga，HD4600显卡，系统自带驱动版本是10.18.15.4235，显示不正常，需要使用10.18.14.4206版本。</p>
+</li>
+<li><p>使用<a href="http://cn.ejie.me/" target="_blank" rel="external">Clover</a>时，偶尔会无限创建新窗口，不确定是资源管理器问题还是兼容性问题。</p>
+</li>
+</ul>
+  
+	</div>
+		<footer class="article-footer clearfix">
 <div class="article-catetags">
 
 <div class="article-categories">
@@ -120,343 +130,47 @@
 
 
 
+	<div class="article-share" id="share">
+	
+	  <div data-url="http://ld99.top/2015/07/18/windows10RemoveApps/" data-title="卸载windows 10系统应用 | LD99&#39;s Blog" data-tsina="1951133423" class="share clearfix">
+	  </div>
+	
+	</div>
 
-<div class="comments-count">
-	
-	  	<span></span>
-		<a href="/2015/07/18/windows10RemoveApps/#comments" class="ds-thread-count comments-count-link" data-thread-key="2015/07/18/windows10RemoveApps/" data-count-type="comments">&nbsp;</a>
-	
-</div>
 
 </footer>
 
-
-    </article>
-
-
-
-
-
-
-   
-    
-    <article class="post-expand post" itemprop="articleBody"> 
-        <header class="article-info clearfix">
-  <h1 itemprop="name">
-    
-      <a href="/2015/07/14/CNN-theory-tutorial/" title="CNN theory tutorial" itemprop="url">CNN theory tutorial</a>
-  </h1>
-  <p class="article-author">By
-       
-		<a href="/about" title="Liang Ding" target="_blank" itemprop="author">Liang Ding</a>
-		
-  <p class="article-time">
-    <time datetime="2015-07-14T01:50:23.000Z" itemprop="datePublished"> 发表于 2015-07-14</time>
-    
-  </p>
-</header>
-    <div class="article-content">
-        
-        <p>花了一天时间来准备讲义，里面有一张企鹅迷宫的图是截的图，还有一个CNN demo是web上找的，其他都是自己画的矢量，包括三个非线性函数图，用<a href="http://www.geogebra.org/">Geogebra</a>数学软件画图，支持$LaTex$，还是很爽的。做讲座的时候是用自己笔记本讲的，用win10自带的阅读器加触摸笔，用起来很带感。下面是讲义，供参考。</p>
-        
-        
-        <p class="article-more-link">
-          
-            <a href="/2015/07/14/CNN-theory-tutorial/#more">Read More</a>
-          
-       </p>
-    </div>
-    <footer class="article-footer clearfix">
-<div class="article-catetags">
-
-<div class="article-categories">
-  <span></span>
-  <a class="article-category-link" href="/categories/theory/">theory</a>
-</div>
-
-
-  <div class="article-tags">
-  
-  <span></span> <a href="/tags/CNN/">CNN</a>
-  </div>
-
-</div>
-
-
-
-
-<div class="comments-count">
+   	       
+	</article>
 	
-	  	<span></span>
-		<a href="/2015/07/14/CNN-theory-tutorial/#comments" class="ds-thread-count comments-count-link" data-thread-key="2015/07/14/CNN-theory-tutorial/" data-count-type="comments">&nbsp;</a>
+<nav class="article-nav clearfix">
+ 
+
+<div class="next">
+<a href="/2015/07/14/CNN-theory-tutorial/"  title="CNN theory tutorial">
+ <strong>下一篇：</strong><br/> 
+ <span>CNN theory tutorial
+</span>
+</a>
+</div>
+
+</nav>
+
 	
-</div>
+<section id="comments" class="comment">
+	<div class="ds-thread" data-thread-key="2015/07/18/windows10RemoveApps/" data-title="卸载windows 10系统应用" data-url="http://ld99.top/2015/07/18/windows10RemoveApps/"></div>
+</section>
 
-</footer>
 
-
-    </article>
-
-
-
-
-
-
-   
-    
-    <article class="post-expand post" itemprop="articleBody"> 
-        <header class="article-info clearfix">
-  <h1 itemprop="name">
-    
-      <a href="/2015/07/10/最近做过的尝试/" title="最近做过的尝试" itemprop="url">最近做过的尝试</a>
-  </h1>
-  <p class="article-author">By
-       
-		<a href="/about" title="Liang Ding" target="_blank" itemprop="author">Liang Ding</a>
-		
-  <p class="article-time">
-    <time datetime="2015-07-10T06:44:30.000Z" itemprop="datePublished"> 发表于 2015-07-10</time>
-    
-  </p>
-</header>
-    <div class="article-content">
-        
-        <p>最近比较忙，做了一些不太重要但很花时间的事情。简单罗列于此。</p>
-        
-        
-        <p class="article-more-link">
-          
-            <a href="/2015/07/10/最近做过的尝试/#more">Read More</a>
-          
-       </p>
-    </div>
-    <footer class="article-footer clearfix">
-<div class="article-catetags">
-
-<div class="article-categories">
-  <span></span>
-  <a class="article-category-link" href="/categories/工程配置/">工程配置</a>
-</div>
-
-
-</div>
-
-
-
-
-<div class="comments-count">
-	
-	  	<span></span>
-		<a href="/2015/07/10/最近做过的尝试/#comments" class="ds-thread-count comments-count-link" data-thread-key="2015/07/10/最近做过的尝试/" data-count-type="comments">&nbsp;</a>
-	
-</div>
-
-</footer>
-
-
-    </article>
-
-
-
-
-
-
-   
-    
-    <article class="post-expand post" itemprop="articleBody"> 
-        <header class="article-info clearfix">
-  <h1 itemprop="name">
-    
-      <a href="/2015/07/07/项目从VS2010迁移到VS2015/" title="项目从VS2010迁移到VS2015" itemprop="url">项目从VS2010迁移到VS2015</a>
-  </h1>
-  <p class="article-author">By
-       
-		<a href="/about" title="Liang Ding" target="_blank" itemprop="author">Liang Ding</a>
-		
-  <p class="article-time">
-    <time datetime="2015-07-07T02:54:51.000Z" itemprop="datePublished"> 发表于 2015-07-07</time>
-    
-  </p>
-</header>
-    <div class="article-content">
-        
-        <p>由于各种原因，实验室机器一直在用Visual Studio 2010，最近闲来无事，升级至Visual Studio 2015 Community，需要重新配置项目，在此记录配置的经历以及遇到的问题。</p>
-        
-        
-        <p class="article-more-link">
-          
-            <a href="/2015/07/07/项目从VS2010迁移到VS2015/#more">Read More</a>
-          
-       </p>
-    </div>
-    <footer class="article-footer clearfix">
-<div class="article-catetags">
-
-<div class="article-categories">
-  <span></span>
-  <a class="article-category-link" href="/categories/工程配置/">工程配置</a>
-</div>
-
-
-  <div class="article-tags">
-  
-  <span></span> <a href="/tags/OpenCV/">OpenCV</a><a href="/tags/PCL/">PCL</a><a href="/tags/boost/">boost</a><a href="/tags/dll/">dll</a>
-  </div>
-
-</div>
-
-
-
-
-<div class="comments-count">
-	
-	  	<span></span>
-		<a href="/2015/07/07/项目从VS2010迁移到VS2015/#comments" class="ds-thread-count comments-count-link" data-thread-key="2015/07/07/项目从VS2010迁移到VS2015/" data-count-type="comments">&nbsp;</a>
-	
-</div>
-
-</footer>
-
-
-    </article>
-
-
-
-
-
-
-   
-    
-    <article class="post-expand post" itemprop="articleBody"> 
-        <header class="article-info clearfix">
-  <h1 itemprop="name">
-    
-      <a href="/2015/07/05/textile/" title="textile试用" itemprop="url">textile试用</a>
-  </h1>
-  <p class="article-author">By
-       
-		<a href="/about" title="Liang Ding" target="_blank" itemprop="author">Liang Ding</a>
-		
-  <p class="article-time">
-    <time datetime="2015-07-05T01:18:16.000Z" itemprop="datePublished"> 发表于 2015-07-05</time>
-    
-  </p>
-</header>
-    <div class="article-content">
-        
-        <p>试用了markdown，感觉功能还是比较简单，发现有一个 <a href="https://github.com/limodou/par">par</a> 扩展很不错，但是没有加入到hexo的扩展里，在hexo扩展中找到了 <a href="http://pandoc.org/">pandoc</a> 的扩展，看上去非常强大，支持各种格式互相转化，不过扩展本身只能转一种，可以自己多创建几个函数。<a href="http://redcloth.org/textile/">textile</a> 是一个功能更多的格式，接下来会抽空学习，本篇博文就是用 <a href="http://redcloth.org/textile/">textile</a> 编写的，但是textile使用的人比较少，相应的语法介绍只有官方介绍，官方的页面那个丑啊，速度特别慢。写 <a href="https://github.com/limodou/par">par</a> 的插件给hexo暂时搁置，仅记录配置经历。</p>
-        
-        
-        <p class="article-more-link">
-          
-            <a href="/2015/07/05/textile/#more">Read More</a>
-          
-       </p>
-    </div>
-    <footer class="article-footer clearfix">
-<div class="article-catetags">
-
-<div class="article-categories">
-  <span></span>
-  <a class="article-category-link" href="/categories/hexo/">hexo</a>
-</div>
-
-
-  <div class="article-tags">
-  
-  <span></span> <a href="/tags/markdown/">markdown</a><a href="/tags/textile/">textile</a>
-  </div>
-
-</div>
-
-
-
-
-<div class="comments-count">
-	
-	  	<span></span>
-		<a href="/2015/07/05/textile/#comments" class="ds-thread-count comments-count-link" data-thread-key="2015/07/05/textile/" data-count-type="comments">&nbsp;</a>
-	
-</div>
-
-</footer>
-
-
-    </article>
-
-
-
-
-
-
-   
-    
-    <article class="post-expand post" itemprop="articleBody"> 
-        <header class="article-info clearfix">
-  <h1 itemprop="name">
-    
-      <a href="/2015/07/04/hello-world/" title="博客开通，欢迎交流" itemprop="url">博客开通，欢迎交流</a>
-  </h1>
-  <p class="article-author">By
-       
-		<a href="/about" title="Liang Ding" target="_blank" itemprop="author">Liang Ding</a>
-		
-  <p class="article-time">
-    <time datetime="2015-07-04T14:31:10.000Z" itemprop="datePublished"> 发表于 2015-07-04</time>
-    
-  </p>
-</header>
-    <div class="article-content">
-        
-        <p>一直觉得应该有这么个东西，把日常遇到的技术问题和发现记录下来，和大家分享，但又觉得以前错过了太多太多，现在再开始已经来不及，其实什么时候开始都不算晚。花了一天时间建好了本站，下面写一些在建站时经历和遇到的问题。</p>
-<p>本站基于<a href="pages.github.com">Github Pages</a>和<a href="http://hexo.io/">Hexo</a>，使用了<a href="https://github.com/wuchong/jacman">jacman</a>模板，参考<a href="http://zipperary.com/categories/hexo/">Zipperary</a>完成了绝大部分配置。下面按先后顺序简要介绍配置过程。</p>
-        
-        
-        <p class="article-more-link">
-          
-            <a href="/2015/07/04/hello-world/#more">Read More</a>
-          
-       </p>
-    </div>
-    <footer class="article-footer clearfix">
-<div class="article-catetags">
-
-<div class="article-categories">
-  <span></span>
-  <a class="article-category-link" href="/categories/hexo/">hexo</a>
-</div>
-
-
-  <div class="article-tags">
-  
-  <span></span> <a href="/tags/建站/">建站</a>
-  </div>
-
-</div>
-
-
-
-
-<div class="comments-count">
-	
-	  	<span></span>
-		<a href="/2015/07/04/hello-world/#comments" class="ds-thread-count comments-count-link" data-thread-key="2015/07/04/hello-world/" data-count-type="comments">&nbsp;</a>
-	
-</div>
-
-</footer>
-
-
-    </article>
-
-
-
-
-
-
-
-</div>
+</div>  
       <div class="openaside"><a class="navbutton" href="#" title="显示侧边栏"></a></div>
+
+  <div id="toc" class="toc-aside">
+  <strong class="toc-title">文章目录</strong>
+ 
+ <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#卸载系统应用"><span class="toc-number">1.</span> <span class="toc-text">卸载系统应用</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Windows_10已知bug"><span class="toc-number">2.</span> <span class="toc-text">Windows 10已知bug</span></a></li></ol>
+ 
+  </div>
 
 <div id="asidepart">
 <div class="closeaside"><a class="closebutton" href="#" title="隐藏侧边栏"></a></div>
@@ -651,12 +365,89 @@ $(document).ready(function(){
       m.removeClass('moveMain');
       a.css('display', 'block').removeClass('fadeOut');
       o.css('display', 'none');
+      
+      $('#toc.toc-aside').css('display', 'none');
         
     }
   });
 });
 </script>
 
+<script type="text/javascript">
+$(document).ready(function(){ 
+  var ai = $('.article-content>iframe'),
+      ae = $('.article-content>embed'),
+      t  = $('#toc'),
+      ta = $('#toc.toc-aside'),
+      o  = $('.openaside'),
+      c  = $('.closeaside');
+  if(ai.length>0){
+    ai.wrap('<div class="video-container" />');
+  };
+  if(ae.length>0){
+   ae.wrap('<div class="video-container" />');
+  };
+  c.click(function(){
+    ta.css('display', 'block').addClass('fadeIn');
+  });
+  o.click(function(){
+    ta.css('display', 'none');
+  });
+  $(window).scroll(function(){
+    ta.css("top",Math.max(140,320-$(this).scrollTop()));
+  });
+});
+</script>
+
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  var $this = $('.share'),
+      url = $this.attr('data-url'),
+      encodedUrl = encodeURIComponent(url),
+      title = $this.attr('data-title'),
+      tsina = $this.attr('data-tsina'),
+      description = $this.attr('description');
+  var html = [
+  '<div class="hoverqrcode clearfix"></div>',
+  '<a class="overlay" id="qrcode"></a>',
+  '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
+  '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
+  '<a href="#qrcode" class="article-share-qrcode" title="微信"></a>',
+  '<a href="http://widget.renren.com/dialog/share?resourceUrl=' + encodedUrl + '&srcUrl=' + encodedUrl + '&title=' + title +'" class="article-share-renren" target="_blank" title="人人"></a>',
+  '<a href="http://service.weibo.com/share/share.php?title='+title+'&url='+encodedUrl +'&ralateUid='+ tsina +'&searchPic=true&style=number' +'" class="article-share-weibo" target="_blank" title="微博"></a>',
+  '<span title="Share to"></span>'
+  ].join('');
+  $this.append(html);
+
+  $('.hoverqrcode').hide();
+
+  var myWidth = 0;
+  function updatehoverqrcode(){
+    if( typeof( window.innerWidth ) == 'number' ) {
+      myWidth = window.innerWidth;
+    } else if( document.documentElement && document.documentElement.clientWidth) {
+      myWidth = document.documentElement.clientWidth;
+    };
+    var qrsize = myWidth > 1024 ? 200:100;
+    var options = {render: 'image', size: qrsize, fill: '#2ca6cb', text: url, radius: 0.5, quiet: 1};
+    var p = $('.article-share-qrcode').position();
+    $('.hoverqrcode').empty().css('width', qrsize).css('height', qrsize)
+                          .css('left', p.left-qrsize/2+20).css('top', p.top-qrsize-10)
+                          .qrcode(options);
+  };
+  $(window).resize(function(){
+    $('.hoverqrcode').hide();
+  });
+  $('.article-share-qrcode').click(function(){
+    updatehoverqrcode();
+    $('.hoverqrcode').toggle();
+  });
+  $('.article-share-qrcode').hover(function(){}, function(){
+      $('.hoverqrcode').hide();
+  });
+});   
+</script>
 
 
 
@@ -780,4 +571,4 @@ _ts(option);
 <!-- Tiny_search End -->
 
   </body>
- </html>
+</html>
