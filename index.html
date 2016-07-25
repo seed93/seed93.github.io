@@ -80,6 +80,177 @@
         <header class="article-info clearfix">
   <h1 itemprop="name">
     
+      <a href="/2016/07/25/U盘量产/" title="U盘量产" itemprop="url">U盘量产</a>
+  </h1>
+  <p class="article-author">By
+       
+		<a href="/about" title="Liang Ding" target="_blank" itemprop="author">Liang Ding</a>
+		
+  <p class="article-time">
+    <time datetime="2016-07-25T08:26:16.000Z" itemprop="datePublished"> 发表于 2016-07-25</time>
+    
+  </p>
+</header>
+    <div class="article-content">
+        
+        <p>偶然发现U盘量产可以对U盘分区，就像做一个移动的操作系统。给U盘划一个虚拟光驱放ubuntu的安装盘，剩下的地方放一个windows，可以用<a href="http://www.easyuefi.com/wintousb/index-cn.html" target="_blank" rel="external">wintoUSB</a>来装。先借立威的U盘试了一下，结果32G的新U盘瞬间就被我玩坏了。</p>
+<p>他的U盘是Kinston的，主控芯片是群联PS2251-07，闪存是东芝的TLC，首先下载了群联官方的MPALL，出现ID lssue 0002，<a href="http://bbs.wuyou.net/forum.php?mod=viewthread&amp;tid=274303" target="_blank" rel="external">网上</a>说是IDBLK_TIMING.dll版本问题，下载了最新版果然可以了，但是会报错0x1042，这个问题后来换了很多版本也没解决。后来尝试用UPTOOL工具，据说是给黑片用的，也就是山寨U盘，这个倒是有个进度条可以懂了，但是会到最后报错，前前后后出了各种错误，先是0078，然后是0082，然后是0099，最后一直是6091。最后这个错误在网上找不到，我也是无语了。</p>
+<p>后来我自己的U盘到了，64G，主控芯片是银灿IS903，闪存是镁光的MLC，用最新的MPTOOL一次性就搞定了，就是量产后写入速度从100兆掉到了58兆，略郁闷。先凑合用吧，至少有一个移动windows救急了。</p>
+
+        
+        
+        <p class="article-more-link">
+          
+       </p>
+    </div>
+    <footer class="article-footer clearfix">
+<div class="article-catetags">
+
+
+</div>
+
+
+
+
+<div class="comments-count">
+	
+	  	<span></span>
+		<a href="/2016/07/25/U盘量产/#comments" class="ds-thread-count comments-count-link" data-thread-key="2016/07/25/U盘量产/" data-count-type="comments">&nbsp;</a>
+	
+</div>
+
+</footer>
+
+
+    </article>
+
+
+
+
+
+
+   
+    
+    <article class="post-expand post" itemprop="articleBody"> 
+        <header class="article-info clearfix">
+  <h1 itemprop="name">
+    
+      <a href="/2016/07/25/magic-lantern/" title="magic lantern" itemprop="url">magic lantern</a>
+  </h1>
+  <p class="article-author">By
+       
+		<a href="/about" title="Liang Ding" target="_blank" itemprop="author">Liang Ding</a>
+		
+  <p class="article-time">
+    <time datetime="2016-07-25T08:14:26.000Z" itemprop="datePublished"> 发表于 2016-07-25</time>
+    
+  </p>
+</header>
+    <div class="article-content">
+        
+        <p>最近看到了一个自称是<a href="http://www.tecdee.com/" target="_blank" rel="external">中文魔灯官方网站</a>，做了汉化版<a href="http://magiclantern.fm/" target="_blank" rel="external">magic lantern</a>，本来ML是开源的，仅仅是汉化后就要收费128，而且版本也不更新，挺气愤的，就想自己汉化一下，然而失败了。。真的很难。</p>
+<p>首先遇到的困难是编译ML，需要用arm的交叉编译，按官方的contrib/toolchain/里的脚本来是不好使的，要安装gcc4.6.2，就困难重重，后来偶然看到这个<a href="http://www.magiclantern.fm/forum/index.php?topic=14725.0" target="_blank" rel="external">帖子</a>，简单下载现成的编译器就可以，果然，很快搞定。</p>
+<p>之后遇到的问题是没法显示汉字，发现是字体的问题，没有汉字字体，我下载了tecdee网站提供的包，提取出rbf中文字体（<a href="http://chdk.wikia.com/wiki/RBF_fonts" target="_blank" rel="external">rbf</a>字体是嵌入式设备专用的字体），然而一载入字体机器就挂了。经过论坛上询问，版主建议用QEMU调试。QEMU倒也好配置，就是中间少了一步make clean，一直没出来图像。有了QEMU以后调试方便了很多，后来发现汉化是一件很难的事，有以下几个问题：</p>
+<ul>
+<li>中文字体太大，占用内存</li>
+<li>rbf字体不支持中文的codepage</li>
+<li>代码里用的都是char来描述字符，只能表示256个字符，中文需要改成wchar</li>
+</ul>
+<p>具体可见<a href="http://www.magiclantern.fm/forum/index.php?topic=17581.0" target="_blank" rel="external">帖子</a>，最终放弃。</p>
+
+        
+        
+        <p class="article-more-link">
+          
+       </p>
+    </div>
+    <footer class="article-footer clearfix">
+<div class="article-catetags">
+
+
+</div>
+
+
+
+
+<div class="comments-count">
+	
+	  	<span></span>
+		<a href="/2016/07/25/magic-lantern/#comments" class="ds-thread-count comments-count-link" data-thread-key="2016/07/25/magic-lantern/" data-count-type="comments">&nbsp;</a>
+	
+</div>
+
+</footer>
+
+
+    </article>
+
+
+
+
+
+
+   
+    
+    <article class="post-expand post" itemprop="articleBody"> 
+        <header class="article-info clearfix">
+  <h1 itemprop="name">
+    
+      <a href="/2016/07/25/酷家乐/" title="酷家乐" itemprop="url">酷家乐</a>
+  </h1>
+  <p class="article-author">By
+       
+		<a href="/about" title="Liang Ding" target="_blank" itemprop="author">Liang Ding</a>
+		
+  <p class="article-time">
+    <time datetime="2016-07-25T07:57:41.000Z" itemprop="datePublished"> 发表于 2016-07-25</time>
+    
+  </p>
+</header>
+    <div class="article-content">
+        
+        <p>7月离开学校，住进了租的房子，闲来无事恰好看到一个网站叫<a href="http://yun.kujiale.com/" target="_blank" rel="external">酷家乐</a>，可以在线制作房子的户型图和装修设计，仔细量了一下屋子的尺寸，简单画了一下家里物品的摆设，做出来效果还可以。</p>
+<p><img src="http://i2.piimg.com/4851/25a46df3795426fc.jpg" alt="户型图"><br><img src="http://qhyxpic.oss.kujiale.com/r/2016/07/20/DVEHOV2DEJLMIK7XJT3WKRI8_800x600.jpg" alt="装修图"></p>
+<p>在家慢慢学着做饭，比想像容易一些，做出来居然还挺好吃的。</p>
+
+        
+        
+        <p class="article-more-link">
+          
+       </p>
+    </div>
+    <footer class="article-footer clearfix">
+<div class="article-catetags">
+
+
+</div>
+
+
+
+
+<div class="comments-count">
+	
+	  	<span></span>
+		<a href="/2016/07/25/酷家乐/#comments" class="ds-thread-count comments-count-link" data-thread-key="2016/07/25/酷家乐/" data-count-type="comments">&nbsp;</a>
+	
+</div>
+
+</footer>
+
+
+    </article>
+
+
+
+
+
+
+   
+    
+    <article class="post-expand post" itemprop="articleBody"> 
+        <header class="article-info clearfix">
+  <h1 itemprop="name">
+    
       <a href="/2016/05/31/Graduation/" title="Graduation" itemprop="url">Graduation</a>
   </h1>
   <p class="article-author">By
@@ -472,191 +643,6 @@
 
 
 
-   
-    
-    <article class="post-expand post" itemprop="articleBody"> 
-        <header class="article-info clearfix">
-  <h1 itemprop="name">
-    
-      <a href="/2015/09/16/text-recognition/" title="text recognition" itemprop="url">text recognition</a>
-  </h1>
-  <p class="article-author">By
-       
-		<a href="/about" title="Liang Ding" target="_blank" itemprop="author">Liang Ding</a>
-		
-  <p class="article-time">
-    <time datetime="2015-09-16T03:31:48.000Z" itemprop="datePublished"> 发表于 2015-09-16</time>
-    
-  </p>
-</header>
-    <div class="article-content">
-        
-        <p>好久没有更新博客了，真是越来越懒，补发一下9月份内部报告的slides</p>
-
-	<object data="/source/TextRecog0916.pdf" type="application/pdf" width="100%" height="500px">你肿么可以没有pdf阅读器呢，只好点 <a href="/source/TextRecog0916.pdf">这里</a>了呢。</object>
-
-
-        
-        
-        <p class="article-more-link">
-          
-       </p>
-    </div>
-    <footer class="article-footer clearfix">
-<div class="article-catetags">
-
-
-  <div class="article-tags">
-  
-  <span></span> <a href="/tags/CNN/">CNN</a><a href="/tags/RNN/">RNN</a>
-  </div>
-
-</div>
-
-
-
-
-<div class="comments-count">
-	
-	  	<span></span>
-		<a href="/2015/09/16/text-recognition/#comments" class="ds-thread-count comments-count-link" data-thread-key="2015/09/16/text-recognition/" data-count-type="comments">&nbsp;</a>
-	
-</div>
-
-</footer>
-
-
-    </article>
-
-
-
-
-
-
-   
-    
-    <article class="post-expand post" itemprop="articleBody"> 
-        <header class="article-info clearfix">
-  <h1 itemprop="name">
-    
-      <a href="/2015/08/14/DDEregression/" title="DDEregression" itemprop="url">DDEregression</a>
-  </h1>
-  <p class="article-author">By
-       
-		<a href="/about" title="Liang Ding" target="_blank" itemprop="author">Liang Ding</a>
-		
-  <p class="article-time">
-    <time datetime="2015-08-14T06:09:47.000Z" itemprop="datePublished"> 发表于 2015-08-14</time>
-    
-  </p>
-</header>
-    <div class="article-content">
-        
-        <p>这是接下来要做的一项工作，会花一些精力来做，可能需要一位帮手一起。Paper的名字叫<a href="http://gaps-zju.org/DDE/DDEregression.pdf">Displaced Dynamic Expression Regression for Real-time Facial Tracking and Animation</a>，是浙江大学<a href="http://kunzhou.net/">zhou kun</a>组的工作，第一完成人Cao Chen围绕这个课题做了很多出色的工作，将face 3D alignment and animation在RGB camera上做到了极致，这一点我在CVPR 2015上也从<a href="http://www.hao-li.com">Li Hao</a>处得到了证实。这项工作效果非常棒，Demo很炫酷，可以参见下面的视频</p>
-<div class="video-container"><iframe   src="http://player.youku.com/player.php/sid/XMTMwOTQ0NzE4MA==/v.swf" frameborder=0 allowfullscreen></iframe></div>
-        
-        
-        <p class="article-more-link">
-          
-            <a href="/2015/08/14/DDEregression/#more">Read More</a>
-          
-       </p>
-    </div>
-    <footer class="article-footer clearfix">
-<div class="article-catetags">
-
-
-  <div class="article-tags">
-  
-  <span></span> <a href="/tags/3D/">3D</a>
-  </div>
-
-</div>
-
-
-
-
-<div class="comments-count">
-	
-	  	<span></span>
-		<a href="/2015/08/14/DDEregression/#comments" class="ds-thread-count comments-count-link" data-thread-key="2015/08/14/DDEregression/" data-count-type="comments">&nbsp;</a>
-	
-</div>
-
-</footer>
-
-
-    </article>
-
-
-
-
-
-
-   
-    
-    <article class="post-expand post" itemprop="articleBody"> 
-        <header class="article-info clearfix">
-  <h1 itemprop="name">
-    
-      <a href="/2015/08/06/ctc/" title="ctc" itemprop="url">ctc</a>
-  </h1>
-  <p class="article-author">By
-       
-		<a href="/about" title="Liang Ding" target="_blank" itemprop="author">Liang Ding</a>
-		
-  <p class="article-time">
-    <time datetime="2015-08-06T01:54:45.000Z" itemprop="datePublished"> 发表于 2015-08-06</time>
-    
-  </p>
-</header>
-    <div class="article-content">
-        
-        <p>半个多月没更新博客，因为真的很忙，就做了一件事，都还没做好。现在有点空余时间赶紧记录一下。</p>
-<h1 id="任务">任务</h1><p>最开始决定要做的任务是车牌识别，这算是文字识别中的一个特殊情况，此处所说的文字识别不是OCR，希望能做一个比较好的通用的文字识别算法，包括街景文字、书面文字、车牌等。假定已经通过检测算法得到了比较好的bounding box，只需要从中识别出正确的字符串。如下图：</p>
-
-<img src="http://i3.tietuku.com/d545e6fa2552313d.jpg" style="display:block;margin:auto"/>
-
-<p>从图中得到”tickets”即可。</p>
-        
-        
-        <p class="article-more-link">
-          
-            <a href="/2015/08/06/ctc/#more">Read More</a>
-          
-       </p>
-    </div>
-    <footer class="article-footer clearfix">
-<div class="article-catetags">
-
-
-  <div class="article-tags">
-  
-  <span></span> <a href="/tags/CNN/">CNN</a><a href="/tags/RNN/">RNN</a>
-  </div>
-
-</div>
-
-
-
-
-<div class="comments-count">
-	
-	  	<span></span>
-		<a href="/2015/08/06/ctc/#comments" class="ds-thread-count comments-count-link" data-thread-key="2015/08/06/ctc/" data-count-type="comments">&nbsp;</a>
-	
-</div>
-
-</footer>
-
-
-    </article>
-
-
-
-
-
-
 
   <nav id="page-nav" class="clearfix">
     <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">Next<span></span></a>
@@ -704,23 +690,23 @@
   <p class="asidetitle">最新发布</p>
     
       <li>
+        <a href="/2016/07/25/U盘量产/">U盘量产</a>
+      </li>
+    
+      <li>
+        <a href="/2016/07/25/magic-lantern/">magic lantern</a>
+      </li>
+    
+      <li>
+        <a href="/2016/07/25/酷家乐/">酷家乐</a>
+      </li>
+    
+      <li>
         <a href="/2016/05/31/Graduation/">Graduation</a>
       </li>
     
       <li>
         <a href="/2016/01/17/recent/">recent</a>
-      </li>
-    
-      <li>
-        <a href="/2015/12/15/不和谐的组会slides/">不和谐的组会slides</a>
-      </li>
-    
-      <li>
-        <a href="/2015/12/15/sublime/">sublime</a>
-      </li>
-    
-      <li>
-        <a href="/2015/12/15/目测最近有重要进展/">目测最近有重要进展</a>
       </li>
     
   </div>

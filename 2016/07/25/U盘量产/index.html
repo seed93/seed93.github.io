@@ -4,24 +4,26 @@
 <head>
   <meta charset="UTF-8">
   
-    <title>DDEregression | LD99&#39;s Blog</title>
+    <title>U盘量产 | LD99&#39;s Blog</title>
     <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
     
     <meta name="author" content="Liang Ding">
     
 
     
-    <meta name="description" content="这是接下来要做的一项工作，会花一些精力来做，可能需要一位帮手一起。Paper的名字叫Displaced Dynamic Expression Regression for Real-time Facial Tracking and Animation，是浙江大学zhou kun组的工作，第一完成人Cao Chen围绕这个课题做了很多出色的工作，将face 3D alignment and anim">
+    <meta name="description" content="偶然发现U盘量产可以对U盘分区，就像做一个移动的操作系统。给U盘划一个虚拟光驱放ubuntu的安装盘，剩下的地方放一个windows，可以用wintoUSB来装。先借立威的U盘试了一下，结果32G的新U盘瞬间就被我玩坏了。
+他的U盘是Kinston的，主控芯片是群联PS2251-07，闪存是东芝的TLC，首先下载了群联官方的MPALL，出现ID lssue 0002，网上说是IDBLK_TIMIN">
 <meta property="og:type" content="article">
-<meta property="og:title" content="DDEregression">
-<meta property="og:url" content="http://ld99.top/2015/08/14/DDEregression/index.html">
+<meta property="og:title" content="U盘量产">
+<meta property="og:url" content="http://ld99.top/2016/07/25/U盘量产/index.html">
 <meta property="og:site_name" content="LD99's Blog">
-<meta property="og:description" content="这是接下来要做的一项工作，会花一些精力来做，可能需要一位帮手一起。Paper的名字叫Displaced Dynamic Expression Regression for Real-time Facial Tracking and Animation，是浙江大学zhou kun组的工作，第一完成人Cao Chen围绕这个课题做了很多出色的工作，将face 3D alignment and anim">
-<meta property="og:image" content="http://i1.tietuku.com/55961e8ea4d07fe4.png">
-<meta property="og:updated_time" content="2015-08-14T08:18:25.969Z">
+<meta property="og:description" content="偶然发现U盘量产可以对U盘分区，就像做一个移动的操作系统。给U盘划一个虚拟光驱放ubuntu的安装盘，剩下的地方放一个windows，可以用wintoUSB来装。先借立威的U盘试了一下，结果32G的新U盘瞬间就被我玩坏了。
+他的U盘是Kinston的，主控芯片是群联PS2251-07，闪存是东芝的TLC，首先下载了群联官方的MPALL，出现ID lssue 0002，网上说是IDBLK_TIMIN">
+<meta property="og:updated_time" content="2016-07-25T08:38:13.799Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="DDEregression">
-<meta name="twitter:description" content="这是接下来要做的一项工作，会花一些精力来做，可能需要一位帮手一起。Paper的名字叫Displaced Dynamic Expression Regression for Real-time Facial Tracking and Animation，是浙江大学zhou kun组的工作，第一完成人Cao Chen围绕这个课题做了很多出色的工作，将face 3D alignment and anim">
+<meta name="twitter:title" content="U盘量产">
+<meta name="twitter:description" content="偶然发现U盘量产可以对U盘分区，就像做一个移动的操作系统。给U盘划一个虚拟光驱放ubuntu的安装盘，剩下的地方放一个windows，可以用wintoUSB来装。先借立威的U盘试了一下，结果32G的新U盘瞬间就被我玩坏了。
+他的U盘是Kinston的，主控芯片是群联PS2251-07，闪存是东芝的TLC，首先下载了群联官方的MPALL，出现ID lssue 0002，网上说是IDBLK_TIMIN">
 
     
     <link rel="alternative" href="/atom.xml" title="LD99&#39;s Blog" type="application/atom+xml">
@@ -80,14 +82,14 @@
 		<header class="article-info clearfix">
   <h1 itemprop="name">
     
-      <a href="/2015/08/14/DDEregression/" title="DDEregression" itemprop="url">DDEregression</a>
+      <a href="/2016/07/25/U盘量产/" title="U盘量产" itemprop="url">U盘量产</a>
   </h1>
   <p class="article-author">By
        
 		<a href="/about" title="Liang Ding" target="_blank" itemprop="author">Liang Ding</a>
 		
   <p class="article-time">
-    <time datetime="2015-08-14T06:09:47.000Z" itemprop="datePublished"> 发表于 2015-08-14</time>
+    <time datetime="2016-07-25T08:26:16.000Z" itemprop="datePublished"> 发表于 2016-07-25</time>
     
   </p>
 </header>
@@ -96,48 +98,18 @@
 		<div id="toc" class="toc-article">
 			<strong class="toc-title">文章目录</strong>
 		
-			<ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#项目介绍"><span class="toc-number">1.</span> <span class="toc-text">项目介绍</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#技术思路"><span class="toc-number">2.</span> <span class="toc-text">技术思路</span></a></li></ol>
+			
 		
 		</div>
 		
-		<p>这是接下来要做的一项工作，会花一些精力来做，可能需要一位帮手一起。Paper的名字叫<a href="http://gaps-zju.org/DDE/DDEregression.pdf" target="_blank" rel="external">Displaced Dynamic Expression Regression for Real-time Facial Tracking and Animation</a>，是浙江大学<a href="http://kunzhou.net/" target="_blank" rel="external">zhou kun</a>组的工作，第一完成人Cao Chen围绕这个课题做了很多出色的工作，将face 3D alignment and animation在RGB camera上做到了极致，这一点我在CVPR 2015上也从<a href="http://www.hao-li.com" target="_blank" rel="external">Li Hao</a>处得到了证实。这项工作效果非常棒，Demo很炫酷，可以参见下面的视频</p>
-<div class="video-container"><iframe src="http://player.youku.com/player.php/sid/XMTMwOTQ0NzE4MA==/v.swf" frameborder="0" allowfullscreen></iframe></div>
-<a id="more"></a>
-<h1 id="项目介绍">项目介绍</h1><p>如上面的视频介绍，这项工作仅使用单个彩色相机就可以实时获得人物的三维面部模型，该模型可以较精确地描绘人物表情，还可以利用模型驱动虚拟3D模型，让avatar实时保持和你相同的表情。这项应用intel也在做，叫<a href="http://newsroom.intel.com/docs/DOC-5482" target="_blank" rel="external">pocket avatar</a>，个人认为intel在CV领域和学界、业界差距还比较大，不过多评论。这个技术能用来做什么呢？一个是像intel那样，提供一种新的社交方式，用表情传递消息，还有人提出可以用这个技术来匿名聊天、交友。当然还应该有更多的应用，比如增强<a href="https://itunes.apple.com/app/id883273541" target="_blank" rel="external">我是表情帝</a>，可以用来辅助人脸活体检测等等。技术很好，应用也很多，但不知道为什么还没有推广开。我先来做一做吧。</p>
-<h1 id="技术思路">技术思路</h1><p><img src="http://i1.tietuku.com/55961e8ea4d07fe4.png" alt="framework" title="framework"></p>
-<p>技术框架见上图，大部分操作都是在训练regression model，需要的外部数据：三维模型数据库，二维alignment数据库。文章使用的是他们组自己做的FaceWareHouse数据库，这个库很厉害，是非商业化的，有150个人，每人46个表情的blendshape，所有模型都是拓扑一致的，据说拓扑一致还是比较难做的。</p>
-<p>DDE Regression是核心，用FaceWareHouse数据库的blendshape作为一组基，假设任何人的任何表情都是其线性表示，用两个归一化的向量e、u来描述表情、identity。除了要估计这两个向量，还需要相机的外参，也就是旋转矩阵R和平移向量t。Q是相机内参，相机不变的情况下Q保持不变。由于三维点有偏差，需要用二维alignment来修正，修正量称为D，真实的二维点投影是S。以上所有变量组成DDE模型核心公式</p>
-<p>$$<br>\text{DDE}(\mathbf{Q}, \mathbf{u}; \mathbf{e}, \mathbf{R}, \mathbf{t}, \mathbf{D}) = \mathbf{S}<br>$$</p>
-<p>其中$\mathbf{Q}$只与相机有关，$\mathbf{u}$只与identity有关，因此在多数情况下是不变的。$\mathbf{e}, \mathbf{R}, \mathbf{t}, \mathbf{D}$构成了shape vector<br>$$<br>\mathbf{P} = (\mathbf{e}, \mathbf{R}, \mathbf{t}, \mathbf{D})<br>$$</p>
-<p>至于DDE模型是怎么计算的，其实也很简单</p>
-<p>$$<br>\begin{cases}<br>\mathbf{F} = \mathbf{R}(\mathbf{Be^T}) + \mathbf{t} \\<br>\mathbf{B} = \mathbf{Cu^T} \\<br>\mathbf{S} = \mathbf{V} + \mathbf{D}<br>\end{cases}<br>$$</p>
-<p>至于怎么由$\mathbf{Q}$怎么算，以及如何用$\mathbf{F}$和$\mathbf{Q}$得到二维点$\mathbf{V}$，是最简单的计算摄像学，不再赘述。</p>
-<p>DDE训练的时候先根据二维点拟合得到最优$(\mathbf{Q}, \mathbf{u}; \mathbf{P})$，然后对每个变量进行绕动训练得到绕动前和绕动后的回归映射。</p>
-<p>CPR我还没仔细看，这个是在另一篇<a href="http://www.ccf.org.cn/resources/1190201776262/digital/SIGGRAPH/vface2013-10-24-02_01_36.pdf" target="_blank" rel="external">3D Shape Regression for Real-timeFacial Animation</a>里介绍的。核心是</p>
-<p>$$ \text{CPR}(I, \mathbf{Q}, \mathbf{u}; \mathbf{P}^{in}) = \mathbf{P}^{out} $$</p>
-<p>从CPR输出后在经过一步后处理，做一个联合优化</p>
-<p>$$<br>
-\begin{cases}
-E_{fit}= & \sum_{k=1}^{m}\left\Vert \prod_{\mathbf{Q}}\left(\hat{\mathbf{R}}^{t}\left(\mathbf{B}\hat{\mathbf{e}}^{tT}\right)+\hat{\mathbf{t}}^{t}\right)-\mathbf{s}_{k}^{t}\right\Vert ^{2}\\
-E_{reg}= & \left\Vert \hat{\mathbf{P}}^{t}-\bar{\mathbf{P}}^{t}\right\Vert ^{2}\\
-E_{tm}= & \left\Vert \hat{\mathbf{P}}^{t-2}-2\hat{\mathbf{P}}^{t-1}+\hat{\mathbf{P}}^{t}\right\Vert ^{2}
-\end{cases}
-<br>$$</p>
-<p>$$
-E_{tot} = E_{fit} + \omega_{reg}E_{reg} + \omega_{tm}E_{tm}
-$$</p>
-<p>由于$\mathbf{Q}$和$\mathbf{u}$不需要经常更新，因此需要一个动态的更新过程，维护一个frame集合，将初始几帧默认放进去，后面的帧如果表情向量PCA投影和与原空间偏离过多，则加入该帧。最后一起做一个简单的优化即可。</p>
-<p>实现的思路大致是这样，有空就来做一做。</p>
+		<p>偶然发现U盘量产可以对U盘分区，就像做一个移动的操作系统。给U盘划一个虚拟光驱放ubuntu的安装盘，剩下的地方放一个windows，可以用<a href="http://www.easyuefi.com/wintousb/index-cn.html" target="_blank" rel="external">wintoUSB</a>来装。先借立威的U盘试了一下，结果32G的新U盘瞬间就被我玩坏了。</p>
+<p>他的U盘是Kinston的，主控芯片是群联PS2251-07，闪存是东芝的TLC，首先下载了群联官方的MPALL，出现ID lssue 0002，<a href="http://bbs.wuyou.net/forum.php?mod=viewthread&amp;tid=274303" target="_blank" rel="external">网上</a>说是IDBLK_TIMING.dll版本问题，下载了最新版果然可以了，但是会报错0x1042，这个问题后来换了很多版本也没解决。后来尝试用UPTOOL工具，据说是给黑片用的，也就是山寨U盘，这个倒是有个进度条可以懂了，但是会到最后报错，前前后后出了各种错误，先是0078，然后是0082，然后是0099，最后一直是6091。最后这个错误在网上找不到，我也是无语了。</p>
+<p>后来我自己的U盘到了，64G，主控芯片是银灿IS903，闪存是镁光的MLC，用最新的MPTOOL一次性就搞定了，就是量产后写入速度从100兆掉到了58兆，略郁闷。先凑合用吧，至少有一个移动windows救急了。</p>
   
 	</div>
 		<footer class="article-footer clearfix">
 <div class="article-catetags">
 
-
-  <div class="article-tags">
-  
-  <span></span> <a href="/tags/3D/">3D</a>
-  </div>
 
 </div>
 
@@ -145,7 +117,7 @@ $$</p>
 
 	<div class="article-share" id="share">
 	
-	  <div data-url="http://ld99.top/2015/08/14/DDEregression/" data-title="DDEregression | LD99&#39;s Blog" data-tsina="1951133423" class="share clearfix">
+	  <div data-url="http://ld99.top/2016/07/25/U盘量产/" data-title="U盘量产 | LD99&#39;s Blog" data-tsina="1951133423" class="share clearfix">
 	  </div>
 	
 	</div>
@@ -158,19 +130,11 @@ $$</p>
 	
 <nav class="article-nav clearfix">
  
- <div class="prev" >
- <a href="/2015/09/16/text-recognition/" title="text recognition">
-  <strong>上一篇：</strong><br/>
-  <span>
-  text recognition</span>
-</a>
-</div>
-
 
 <div class="next">
-<a href="/2015/08/06/ctc/"  title="ctc">
+<a href="/2016/07/25/magic-lantern/"  title="magic lantern">
  <strong>下一篇：</strong><br/> 
- <span>ctc
+ <span>magic lantern
 </span>
 </a>
 </div>
@@ -179,7 +143,7 @@ $$</p>
 
 	
 <section id="comments" class="comment">
-	<div class="ds-thread" data-thread-key="2015/08/14/DDEregression/" data-title="DDEregression" data-url="http://ld99.top/2015/08/14/DDEregression/"></div>
+	<div class="ds-thread" data-thread-key="2016/07/25/U盘量产/" data-title="U盘量产" data-url="http://ld99.top/2016/07/25/U盘量产/"></div>
 </section>
 
 
@@ -189,7 +153,7 @@ $$</p>
   <div id="toc" class="toc-aside">
   <strong class="toc-title">文章目录</strong>
  
- <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#项目介绍"><span class="toc-number">1.</span> <span class="toc-text">项目介绍</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#技术思路"><span class="toc-number">2.</span> <span class="toc-text">技术思路</span></a></li></ol>
+ 
  
   </div>
 
